@@ -1,0 +1,218 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 16px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #8f2ed9;
+  transform: translateY(-2px);
+}
+
+/* Especialidades */
+.especialidades {
+  text-align: center;
+}
+
+.especialidades h2 {
+  margin-bottom: 40px;
+}
+
+.especialidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.especialidad-card {
+  padding: 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.especialidad-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.especialidad-card h3 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.especialidad-card p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Cómo trabaja */
+.como-trabaja {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.como-trabaja h2 {
+  margin-bottom: 30px;
+}
+
+.como-trabaja-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.como-trabaja-content p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Testimonios */
+.testimonios {
+  text-align: center;
+}
+
+.testimonios h2 {
+  margin-bottom: 40px;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonio-card {
+  padding: 30px;
+  background: var(--code-bg);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.testimonio-card p {
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.testimonio-card span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* CTA Final */
+.cta-final {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 16px;
+}
+
+.cta-final h2 {
+  margin-bottom: 16px;
+}
+
+.cta-final p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.whatsapp-button:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cta-button,
+  .whatsapp-button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}

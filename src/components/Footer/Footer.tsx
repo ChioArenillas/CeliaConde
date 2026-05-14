@@ -1,8 +1,60 @@
+import { Link } from 'react-router'
+import './Footer.css'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <div>
-      
-    </div>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-brand">
+          <h3>Celia Conde</h3>
+          <p>Psicóloga Familiar</p>
+          <p className="footer-description">Acompañamiento psicológico profesional para ayudarte a encontrar tu bienestar emocional.</p>
+        </div>
+
+        <div className="footer-links">
+          <h4>Enlaces</h4>
+          <nav>
+            <Link to="/">Inicio</Link>
+            <Link to="/about">Sobre Mí</Link>
+            <Link to="/servicios">Servicios</Link>
+            <Link to="/contacto">Contacto</Link>
+          </nav>
+        </div>
+
+        <div className="footer-contact">
+          <h4>Contacto</h4>
+          <p>📍 Madrid, España</p>
+          <p>📧 info@celiaconde.com</p>
+          <p>📱 +34 600 000 000</p>
+          <div className='footer-icons'>
+                    <a href="https://wa.me/34600000000" className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <FaWhatsapp size={28} />
+        </a>
+
+             <a
+            href="https://instagram.com/tuusuario"
+            className="footer-instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FaInstagram size={28} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>&copy; {currentYear} Celia Conde - Psicóloga Familiar. Todos los derechos reservados.</p>
+        <p className="legal-links">
+          <Link to="/aviso-legal">Aviso Legal</Link>
+          <Link to="/privacidad">Política de Privacidad</Link>
+          <Link to="/cookies">Política de Cookies</Link>
+        </p>
+      </div>
+    </footer>
   )
 }
