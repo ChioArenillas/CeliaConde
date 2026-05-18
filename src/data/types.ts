@@ -47,6 +47,6 @@ export interface Paso {
 }
 
 export interface FAQ {
-  question: string;
-  answer: string;
+  title: string;
+  description: string;
 }

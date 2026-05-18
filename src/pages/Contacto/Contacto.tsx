@@ -1,5 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import './Contacto.css'
+import { FAQs, InfoContacto } from '../../data/data'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -30,16 +32,25 @@ export default function Contacto() {
     })
   }
 
+  const preguntas = FAQs.map(FAQ => {
+    return (
+          <div className="faq-item">
+            <h3>{FAQ.title}</h3>
+            <p> {FAQ.description}</p>
+          </div>
+    )
+  })
+
   return (
     <div className="contacto">
 
-      <section className="contacto-hero">
-          <div className="contacto-hero-content">
+      <section className="hero contacto-hero">
+          <div className="hero-content">
           <h1>Contacto</h1>
         <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
         </div>
       </section>
-      
+
       <section className="contacto-content">
         <div className="contacto-info">
           <h2>Información de Contacto</h2>
@@ -48,7 +59,7 @@ export default function Contacto() {
             <div className="info-icon">📍</div>
             <div>
               <h3>Dirección</h3>
-              <p>Calle Ejemplo, 123, 1ºA<br/>28001 Madrid</p>
+              <p>{InfoContacto.address}</p>
             </div>
           </div>
 
@@ -56,7 +67,7 @@ export default function Contacto() {
             <div className="info-icon">📧</div>
             <div>
               <h3>Email</h3>
-              <p>info@celiaconde.com</p>
+              <p>{InfoContacto.email}</p>
             </div>
           </div>
 
@@ -64,7 +75,7 @@ export default function Contacto() {
             <div className="info-icon">📱</div>
             <div>
               <h3>Teléfono / WhatsApp</h3>
-              <p>+34 600 000 000</p>
+              <p>{InfoContacto.phone}</p>
             </div>
           </div>
 
@@ -78,12 +89,12 @@ export default function Contacto() {
 
           <div className="whatsapp-fixed">
             <a
-              href="https://wa.me/34600000000"
+              href={InfoContacto.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn"
             >
-              <span className="whatsapp-icon">💬</span>
+              <span className="whatsapp-icon"><FaWhatsapp size={28} /></span>
               Contactar por WhatsApp
             </a>
           </div>
@@ -173,30 +184,7 @@ export default function Contacto() {
       <section className="faq-section">
         <h2>Preguntas Frecuentes</h2>
         <div className="faq-grid">
-          <div className="faq-item">
-            <h3>¿Cuánto dura cada sesión?</h3>
-            <p>Las sesiones individuales duran aproximadamente 50 minutos. Las sesiones de pareja o familiares pueden extenderse hasta 75-90 minutos según sea necesario.</p>
-          </div>
-          <div className="faq-item">
-            <h3>¿Ofreces terapia online y presencial?</h3>
-            <p>Sí, ofrezco ambas modalidades. La terapia online se realiza por videollamada a través de una plataforma segura y confidencial.</p>
-          </div>
-          <div className="faq-item">
-            <h3>¿Cuál es el precio de las sesiones?</h3>
-            <p>El precio de la sesión individual es de XX€. Para terapias de pareja o familiares, el precio es de XX€. La primera sesión tiene un coste de XX€.</p>
-          </div>
-          <div className="faq-item">
-            <h3>¿Tengo que pedir cita con mucha antelación?</h3>
-            <p>Recomiendo solicitar cita con al menos una semana de antelación, aunque dependiendo de la disponibilidad podría haber huecos más cercanos.</p>
-          </div>
-          <div className="faq-item">
-            <h3>¿Qué métodos de pago aceptas?</h3>
-            <p>Acepto pago en efectivo, transferencia bancaria y tarjetas de crédito/débito. El pago se realiza al finalizar cada sesión.</p>
-          </div>
-          <div className="faq-item">
-            <h3>¿Es confidencial la terapia?</h3>
-            <p>Absolutamente. Todo lo hablado en las sesiones es completamente confidencial, salvo en situaciones excepcionales donde haya riesgo para la persona o terceros.</p>
-          </div>
+          {preguntas}
         </div>
       </section>
     </div>

@@ -142,22 +142,22 @@ export const Terapias: Terapia[] = [
 
 export const Pasos: Paso[] = [
   {
-    number: "01",
+    number: "1",
     title: "Contacto",
     description: "Escríbeme por WhatsApp o formulario para consultar disponibilidad."
   },
   {
-    number: "02",
+    number: "2",
     title: "Primera Sesión",
     description: "Nos conocemos, evalúas tu situación y definimos objetivos."
   },
   {
-    number: "03",
+    number: "3",
     title: "Proceso",
     description: "Trabajamos semanalmente con tareas y reflexiones entre sesiones."
   },
   {
-    number: "04",
+    number: "4",
     title: "Avance",
     description: "Consolidamos cambios y planificamos el alta cuando estés listo."
   }
@@ -165,19 +165,28 @@ export const Pasos: Paso[] = [
 
 export const FAQs: FAQ[] = [
   {
-    question: "¿Aceptáis seguros médicos?",
-    answer: "Actualmente trabajo como psicóloga general sanitaria de forma privada. Puedo emitir facturas para que solicites el reembolso a tu seguro si tu póliza lo incluye."
+    title: "¿Aceptáis seguros médicos?",
+    description: "Actualmente trabajo como psicóloga general sanitaria de forma privada. Puedo emitir facturas para que solicites el reembolso a tu seguro si tu póliza lo incluye."
   },
   {
-    question: "¿Cuánto dura cada sesión?",
-    answer: "Las sesiones individuales duran 50 minutos y las de pareja 60 minutos."
+    title: "¿Cuánto dura cada sesión?",
+    description: "Las sesiones individuales duran 50 minutos y las de pareja 60 minutos."
   },
   {
-    question: "¿Qué pasa si necesito cancelar?",
-    answer: "Puedes cancelar o reprogramar hasta 24 horas antes sin coste. Pasado ese tiempo, se abonará el 50% de la sesión."
+    title: "¿Qué pasa si necesito cancelar?",
+    description: "Puedes cancelar o reprogramar hasta 24 horas antes sin coste. Pasado ese tiempo, se abonará el 50% de la sesión."
   },
   {
-    question: "¿Es mejor online o presencial?",
-    answer: "Ambas modalidades son igual de efectivas según la evidencia científica. Depende de tu preferencia y comodidad."
+    title: "¿Es mejor online o presencial?",
+    description: "Ambas modalidades son igual de efectivas según la evidencia científica. Depende de tu preferencia y comodidad."
+  },
+  {
+    title: "¿Qué métodos de pago aceptas?",
+    description: "Acepto pago en efectivo, transferencia bancaria y tarjetas de crédito/débito. El pago se realiza al finalizar cada sesión."
+  },
+  {
+    title: "¿Es confidencial la terapia?",
+    description: "Absolutamente. Todo lo hablado en las sesiones es completamente confidencial, salvo en situaciones excepcionales donde haya riesgo para la persona o terceros."
   }
 ];
+

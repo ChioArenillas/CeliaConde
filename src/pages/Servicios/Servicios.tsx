@@ -1,12 +1,34 @@
+import { Pasos, Terapias } from '../../data/data'
 import './Servicios.css'
 
 export default function Servicios() {
+  const terapias = Terapias.map((terapia) => {
+    return (
+          <div className="terapia-card">
+            <h3>{terapia.title}</h3>
+            <p>{terapia.description}</p>
+            <div className="terapia-info">
+              <span><strong>Duración: </strong>{terapia.duration}</span>
+              <span><strong>Frecuencia: </strong>{terapia.frequency}</span>
+            </div>
+          </div>
+    )
+  })
+
+  const pasos = Pasos.map((paso) => {
+    return (
+          <div className="step">
+            <div className="step-number">{paso.number}</div>
+            <h3>{paso.title}</h3>
+            <p>{paso.description}</p>
+          </div>    )
+  })
 
 
   return (
     <div className="servicios">
-      <section className="servicios-hero">
-          <div className="servicios-hero-content">
+      <section className="hero servicios-hero">
+          <div className="hero-content">
           <h1>Servicios</h1>
           <p>Acompañamiento psicológico profesional adaptado a tus necesidades</p>
         </div>
@@ -44,64 +66,14 @@ export default function Servicios() {
       <section className="tipos-terapia">
         <h2>Tipos de Terapia</h2>
         <div className="terapias-grid">
-          <div className="terapia-card">
-            <h3>Terapia Individual</h3>
-            <p>Sesiones one-to-one enfocadas en tus necesidades personales. Trabajaremos juntos en aquello que te preocupa o te hace sufrir.</p>
-            <div className="terapia-info">
-              <span><strong>Duración:</strong> 50 minutos</span>
-              <span><strong>Frecuencia:</strong> Semanal o quincenal</span>
-            </div>
-          </div>
-          <div className="terapia-card">
-            <h3>Terapia de Pareja</h3>
-            <p>Espacio para mejorar la comunicación, resolver conflictos y fortalecer el vínculo afectivo entre ambos miembros.</p>
-            <div className="terapia-info">
-              <span><strong>Duración:</strong> 60-75 minutos</span>
-              <span><strong>Frecuencia:</strong> Quincenal o mensual</span>
-            </div>
-          </div>
-          <div className="terapia-card">
-            <h3>Terapia Familiar</h3>
-            <p>Intervención dirigida a mejorar las relaciones familiares, resolver conflictos y promover un ambiente saludable en el hogar.</p>
-            <div className="terapia-info">
-              <span><strong>Duración:</strong> 60-90 minutos</span>
-              <span><strong>Frecuencia:</strong> Según necesidades</span>
-            </div>
-          </div>
-          <div className="terapia-card">
-            <h3>Orientación Psicológica</h3>
-            <p>Sesiones puntuales para consultar dudas específicas o recibir orientación sobre situaciones concretas.</p>
-            <div className="terapia-info">
-              <span><strong>Duración:</strong> 50 minutos</span>
-              <span><strong>Frecuencia:</strong> Puntual</span>
-            </div>
-          </div>
+          {terapias}
         </div>
       </section>
 
       <section className="proceso">
         <h2>¿Cómo empezar?</h2>
         <div className="proceso-steps">
-          <div className="step">
-            <div className="step-number">1</div>
-            <h3>Contacta conmigo</h3>
-            <p>Escríbeme por WhatsApp o mediante el formulario de contacto para solicitar información.</p>
-          </div>
-          <div className="step">
-            <div className="step-number">2</div>
-            <h3>Primera sesión</h3>
-            <p>Agendamos una primera sesión para conocernos y evaluar tus necesidades.</p>
-          </div>
-          <div className="step">
-            <div className="step-number">3</div>
-            <h3>Plan personalizado</h3>
-            <p>Diseñamos juntos un plan de intervención adaptado a tus objetivos.</p>
-          </div>
-          <div className="step">
-            <div className="step-number">4</div>
-            <h3>Comienza tu proceso</h3>
-            <p>Iniciamos las sesiones regulares y trabajamos hacia tu bienestar emocional.</p>
-          </div>
+        {pasos}
         </div>
       </section>
 

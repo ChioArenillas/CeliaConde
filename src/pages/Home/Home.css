@@ -5,35 +5,6 @@
   padding: 40px 20px;
 }
 
-/* Hero Section */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
-  padding: 40px 40px;
-  background: linear-gradient(
-    135deg,
-    var(--bg-dark) 0%,
-    var(--accent) 40%,
-    var(--code-bg) 40%,
-    var(--bg) 100%
-  );
-  overflow: hidden;
-}
-.hero-image-wrapper img {
-  width: 100%;
-  max-width: 380px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-}
-.hero-content h1 {
-  font-size: 52px;
-  line-height: 1.1;
-  color: var(--text-h);
-  max-width: 500px;
-  margin-bottom: 24px;
-}
-
 .cta-button-hero {
   background: var(--bg-dark);
   color: var(--bg);

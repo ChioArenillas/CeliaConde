@@ -12,32 +12,27 @@ export default function About() {
     );
   });
 
-    const values = Valores.map((value) => {
-          const Icon = value.icon;
+  const values = Valores.map((value) => {
+    const Icon = value.icon;
 
     return (
-              <div className="value-card">
-                        <Icon size={24} />
+      <div className="value-card">
+        <Icon size={24} />
 
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
-            </div>
+        <h3>{value.title}</h3>
+        <p>{value.description}</p>
+      </div>
     );
   });
 
-
-
-
-
-
   return (
     <div className="about">
-      <section className="about-hero">
-        <div className="about-hero-content">
+      <section className="hero about-hero">
+        <div className="hero-content">
           <h1>Celia Conde</h1>
           <h2>Psicóloga Familiar</h2>
         </div>
-        <div className="about-hero-image-wrapper">
+        <div className="hero-image-wrapper">
           <img src={heroImg} alt="Celia Conde - Psicóloga Familiar" />
         </div>
       </section>
@@ -73,9 +68,7 @@ export default function About() {
 
         <div className="about-values">
           <h2>Mis Valores</h2>
-          <div className="values-grid">
-            {values}
-          </div>
+          <div className="values-grid">{values}</div>
         </div>
       </section>
     </div>
