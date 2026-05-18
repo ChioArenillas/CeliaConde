@@ -4,9 +4,12 @@ export default function Servicios() {
   return (
     <div className="servicios">
       <section className="servicios-hero">
-        <h1>Servicios</h1>
-        <p>Acompañamiento psicológico profesional adaptado a tus necesidades</p>
+          <div className="servicios-hero-content">
+          <h1>Servicios</h1>
+          <p>Acompañamiento psicológico profesional adaptado a tus necesidades</p>
+        </div>
       </section>
+
 
       <section className="modalidades">
         <h2>Modalidades de Atención</h2>
@@ -100,7 +103,8 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="cta-servicios">
+{/* quiero que este botón me lleve al contacto o al whats? */}
+      <section className="cta-servicios"> 
         <h2>¿Tienes dudas?</h2>
         <p>Estoy aquí para ayudarte. Contacta conmigo sin compromiso.</p>
         <a href="/contacto" className="cta-button">Contactar Ahora</a>

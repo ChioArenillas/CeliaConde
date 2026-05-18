@@ -32,11 +32,14 @@ export default function Contacto() {
 
   return (
     <div className="contacto">
-      <section className="contacto-hero">
-        <h1>Contacto</h1>
-        <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
-      </section>
 
+      <section className="contacto-hero">
+          <div className="contacto-hero-content">
+          <h1>Contacto</h1>
+        <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
+        </div>
+      </section>
+      
       <section className="contacto-content">
         <div className="contacto-info">
           <h2>Información de Contacto</h2>

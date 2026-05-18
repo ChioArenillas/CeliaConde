@@ -1,19 +1,23 @@
 import './About.css'
+import heroImg from "../../assets/CeliaCondeSmall.jpg";
+
 
 export default function About() {
   return (
     <div className="about">
       <section className="about-hero">
-        <h1>Sobre Mí</h1>
-        <div className="about-image">
-          <img src="/images/celia-conde.jpg" alt="Celia Conde - Psicóloga Familiar" />
+          <div className="about-hero-content">
+          <h1>Celia Conde</h1>
+          <h2>Psicóloga Familiar</h2>
+        </div>
+        <div className="about-hero-image-wrapper">
+          <img src={heroImg} alt="Celia Conde - Psicóloga Familiar" />
         </div>
       </section>
 
+
       <section className="about-content">
         <div className="about-text">
-          <h2>Celia Conde</h2>
-          <p className="subtitle">Psicóloga Familiar</p>
 
           <p>Hola, soy Celia Conde, psicóloga especializada en terapia familiar y de pareja. Mi objetivo es acompañarte en tu proceso de crecimiento personal y ayudarte a encontrar el equilibrio emocional que necesitas.</p>
 
