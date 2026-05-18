@@ -127,7 +127,8 @@
 
 .value-card {
   padding: 30px 20px;
-  background: var(--bg);
+  background: var(--bg-dark);
+  color: var(--text-light);
   border: 1px solid var(--border);
   border-radius: 12px;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -139,7 +140,7 @@
 }
 
 .value-card h3 {
-  color: var(--accent);
+  color: var(--bg);
   margin-bottom: 12px;
   font-size: 20px;
 }

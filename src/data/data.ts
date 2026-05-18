@@ -8,7 +8,7 @@ import type {
   Paso, 
   FAQ 
 } from './types';
-import { FiWind, FiHeart, FiUsers, FiZap, FiCloudRain, FiDroplet } from "react-icons/fi";
+import { FiWind, FiHeart, FiUsers, FiZap, FiCloudRain, FiDroplet, FiLock, FiSmile, FiBookOpen } from "react-icons/fi";
 
 export const Especialidades: Especialidad[] = [
   {
@@ -96,19 +96,26 @@ export const Formacion: FormacionItem[] = [
 export const Valores: Valor[] = [
   {
     title: "Empatía",
-    description: "Te escucho sin juzgar, entendiendo tu mundo desde dentro."
+    description: "Te escucho sin juzgar, entendiendo tu mundo desde dentro.",
+    icon: FiHeart
   },
   {
     title: "Confidencialidad",
-    description: "Todo lo que hables aquí queda estrictamente entre nosotros."
+    description: "Todo lo que hables aquí queda estrictamente entre nosotros.",
+        icon: FiLock
+
   },
   {
     title: "Cercanía",
-    description: "Un trato humano, cálido y profesional adaptado a ti."
+    description: "Un trato humano, cálido y profesional adaptado a ti.",
+        icon: FiSmile
+
   },
   {
     title: "Evidencia Científica",
-    description: "Técnicas validadas científicamente para garantizar resultados."
+    description: "Técnicas validadas científicamente para garantizar resultados.",
+        icon: FiBookOpen
+
   }
 ];
 

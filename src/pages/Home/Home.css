@@ -34,9 +34,7 @@
   margin-bottom: 24px;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 16px 32px;
+.cta-button-hero {
   background: var(--bg-dark);
   color: var(--bg);
   border-radius: 12px;
@@ -44,9 +42,10 @@
   transition: all 0.2s ease;
 }
 
-.cta-button:hover {
+.cta-button-hero:hover {
   transform: translateY(-3px);
-  background: var(--bg-dark);
+  background-color: var(--text);
+  color: var(--accent);
 }
 
 

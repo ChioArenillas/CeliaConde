@@ -97,3 +97,38 @@ p {
   margin: 0;
 }
 
+
+/* CTA Servicios */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.cta h2 {
+  margin-bottom: 16px;
+  color: var(--text-light);
+}
+
+.cta p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: var(--code-bg);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: var(--text);
+  color: var(--code-bg);
+  transform: translateY(-2px);
+}

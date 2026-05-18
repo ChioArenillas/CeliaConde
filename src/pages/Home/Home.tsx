@@ -1,4 +1,4 @@
-import { Especialidades, InfoContacto, Reviews } from "../../data/data";
+import { Especialidades, Reviews } from "../../data/data";
 import "./Home.css";
 import heroImg from "../../assets/CeliaConde.jpg";
 
@@ -31,12 +31,12 @@ export default function Home() {
         </div>
         <div className="hero-content">
           <h1>Un espacio seguro para entenderte y avanzar.</h1>
-          <a href="#contacto" className="cta-button">
+          <a href="contacto" className="cta-button cta-button-hero">
             Reserva una primera sesión
           </a>
         </div>
       </section>
-      
+
       <section className="especialidades">
         <h2>Especialidades</h2>
         <div className="especialidades-grid">{especialidades}</div>
@@ -62,21 +62,12 @@ export default function Home() {
         <div className="testimonios-grid">{reviews}</div>
       </section>
 
-      <section className="cta-final" id="contacto">
+      <section className="cta"> 
         <h2>¿Listo/a para dar el primer paso?</h2>
-        <p>
-          Agenda tu primera sesión y comienza tu camino hacia el bienestar
-          emocional.
-        </p>
-        <a
-          href={InfoContacto.whatsappLink}
-          className="whatsapp-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contactar por WhatsApp
-        </a>
+        <p>Agenda tu primera sesión y comienza tu camino hacia el bienestar emocional.</p>
+        <a href="/contacto" className="cta-button">Contactar Ahora</a>
       </section>
+
     </div>
   );
 }

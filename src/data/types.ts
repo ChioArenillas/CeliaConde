@@ -30,6 +30,7 @@ export interface FormacionItem {
 export interface Valor {
   title: string;
   description: string;
+  icon: IconType; 
 }
 
 export interface Terapia {

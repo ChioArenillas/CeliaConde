@@ -1,6 +1,8 @@
 import './Servicios.css'
 
 export default function Servicios() {
+
+
   return (
     <div className="servicios">
       <section className="servicios-hero">
@@ -103,8 +105,7 @@ export default function Servicios() {
         </div>
       </section>
 
-{/* quiero que este botón me lleve al contacto o al whats? */}
-      <section className="cta-servicios"> 
+      <section className="cta"> 
         <h2>¿Tienes dudas?</h2>
         <p>Estoy aquí para ayudarte. Contacta conmigo sin compromiso.</p>
         <a href="/contacto" className="cta-button">Contactar Ahora</a>
