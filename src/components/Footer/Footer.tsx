@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import './Footer.css'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { InfoContacto } from '../../data/data'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -26,16 +27,16 @@ export default function Footer() {
 
         <div className="footer-contact">
           <h4>Contacto</h4>
-          <p>📍 Madrid, España</p>
-          <p>📧 info@celiaconde.com</p>
-          <p>📱 +34 600 000 000</p>
+          <p>📍 {InfoContacto.address}</p>
+          <p>📧 {InfoContacto.email}</p>
+          <p>📱 {InfoContacto.phone}</p>
           <div className='footer-icons'>
-                    <a href="https://wa.me/34600000000" className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <a href={InfoContacto.whatsappLink} className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <FaWhatsapp size={28} />
         </a>
 
              <a
-            href="https://instagram.com/tuusuario"
+            href={InfoContacto.instagramLink}
             className="footer-instagram"
             target="_blank"
             rel="noopener noreferrer"

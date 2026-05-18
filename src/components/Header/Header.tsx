@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router'
 import './Header.css'
 import { FaWhatsapp } from 'react-icons/fa'
+import { InfoContacto } from '../../data/data'
 
 export default function Header() {
   return (
@@ -21,7 +22,7 @@ export default function Header() {
           <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Contacto
           </NavLink>
-        <a href="https://wa.me/34600000000" className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href={InfoContacto.whatsappLink} className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <FaWhatsapp size={28} />
         </a>
 

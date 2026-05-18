@@ -1,9 +1,31 @@
+import { Especialidades, InfoContacto, Reviews } from '../../data/data'
 import './Home.css'
 
 export default function Home() {
+
+
+  const especialidades = Especialidades.map(especialidad => {
+    const Icon = especialidad.icon
+
+        return (      
+          <div className="especialidad-card">
+            <Icon size={24} />
+            <h3>{especialidad.title}</h3>
+            <p>{especialidad.description}</p>
+          </div>
+    )
+  })
+  const reviews = Reviews.map(review => {
+        return (      
+          <div className="testimonio-card">
+            <p>{review.text}</p>
+            <span>- {review.name}</span>
+          </div>
+    )
+  })
+
   return (
     <div className="home">
-      {/* Hero Section */}
       <section className="hero">
         <h1>Un espacio seguro para entenderte y avanzar.</h1>
         <div className="hero-image">
@@ -12,38 +34,13 @@ export default function Home() {
         <a href="#contacto" className="cta-button">Reserva una primera sesión</a>
       </section>
 
-      {/* Especialidades */}
       <section className="especialidades">
-        <h2>Especialidades</h2>
+                <h2>Especialidades</h2>
         <div className="especialidades-grid">
-          <div className="especialidad-card">
-            <h3>Ansiedad</h3>
-            <p>Aprende a gestionar la ansiedad y recuperar tu tranquilidad.</p>
-          </div>
-          <div className="especialidad-card">
-            <h3>Autoestima</h3>
-            <p>Trabaja en tu autoconcepto y fortalece tu confianza personal.</p>
-          </div>
-          <div className="especialidad-card">
-            <h3>Terapia de Pareja</h3>
-            <p>Mejora la comunicación y resuelve conflictos en tu relación.</p>
-          </div>
-          <div className="especialidad-card">
-            <h3>Estrés</h3>
-            <p>Encuentra herramientas para manejar el estrés diario.</p>
-          </div>
-          <div className="especialidad-card">
-            <h3>Depresión</h3>
-            <p>Acompañamiento profesional para superar momentos difíciles.</p>
-          </div>
-          <div className="especialidad-card">
-            <h3>Problemas Familiares</h3>
-            <p>Resolución de conflictos y mejora de relaciones familiares.</p>
-          </div>
+        {especialidades}
         </div>
       </section>
 
-      {/* Cómo trabaja */}
       <section className="como-trabaja">
         <h2>Cómo trabajo</h2>
         <div className="como-trabaja-content">
@@ -52,30 +49,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonios */}
       <section className="testimonios">
         <h2>Lo que dicen mis pacientes</h2>
         <div className="testimonios-grid">
-          <div className="testimonio-card">
-            <p>"Gracias a Celia he logrado entender mejor mis emociones y manejar mi ansiedad. Me siento mucho mejor."</p>
-            <span>- María G.</span>
-          </div>
-          <div className="testimonio-card">
-            <p>"La terapia de pareja nos ha ayudado a comunicarnos mejor y resolver conflictos que llevábamos años arrastrando."</p>
-            <span>- Carlos y Ana</span>
-          </div>
-          <div className="testimonio-card">
-            <p>"Un espacio seguro donde me siento completamente escuchada. Celia tiene una empatía increíble."</p>
-            <span>- Laura M.</span>
-          </div>
+          {reviews}
         </div>
       </section>
 
-      {/* CTA Final */}
       <section className="cta-final" id="contacto">
         <h2>¿Listo/a para dar el primer paso?</h2>
         <p>Agenda tu primera sesión y comienza tu camino hacia el bienestar emocional.</p>
-        <a href="https://wa.me/34600000000" className="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <a href={InfoContacto.whatsappLink} className="whatsapp-button" target="_blank" rel="noopener noreferrer">
           Contactar por WhatsApp
         </a>
       </section>

@@ -1,4 +1,5 @@
 .footer {
+    width: 100%;
   background: var(--code-bg);
   padding: 60px 20px 30px;
   margin-top: auto;
@@ -20,7 +21,6 @@
 }
 
 .footer-brand > p {
-  color: var(--accent);
   font-weight: 500;
   margin-bottom: 16px;
 }
