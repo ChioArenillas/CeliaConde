@@ -128,10 +128,6 @@ display: flex;
 }
 
 @media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
 
   .footer-brand,
   .footer-links,
@@ -145,6 +141,10 @@ display: flex;
 }
 
 @media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   .footer {
     padding: 40px 15px 20px;
   }

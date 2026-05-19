@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>&copy; {currentYear} {InfoContacto.name} - {InfoContacto.job}. Todos los derechos reservados.</p>
         <p className="legal-links">
-          <Link to="/aviso-legal">Aviso Legal</Link>
+          <Link to="/legal">Aviso Legal</Link>
           <Link to="/privacidad">Política de Privacidad</Link>
           <Link to="/cookies">Política de Cookies</Link>
         </p>

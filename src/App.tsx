@@ -5,6 +5,9 @@ import About from './pages/About/About'
 import Home from './pages/Home/Home'
 import Servicios from './pages/Servicios/Servicios'
 import Contacto from './pages/Contacto/Contacto'
+import Legal from './pages/Legal/AvisoLegal'
+import Privacidad from './pages/Legal/Privacidad'
+import Cookies from './pages/Legal/Cookies'
 
 export default function App() {
 
@@ -17,6 +20,9 @@ export default function App() {
         <Route path='about' element= {<About />}/>
         <Route path='servicios' element= {<Servicios />}/>
         <Route path='contacto' element= {<Contacto />}/>
+        <Route path="legal" element={<Legal />} />
+        <Route path="privacidad" element={<Privacidad />} />
+        <Route path="cookies" element={<Cookies />} />
       </Route>
     </Routes>
     </BrowserRouter>
