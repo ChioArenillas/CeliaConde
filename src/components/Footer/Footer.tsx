@@ -10,8 +10,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h3>Celia Conde</h3>
-          <p>Psicóloga Familiar</p>
+          <h3>{InfoContacto.name}</h3>
+          <p>{InfoContacto.job}</p>
           <p className="footer-description">Acompañamiento psicológico profesional para ayudarte a encontrar tu bienestar emocional.</p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Celia Conde - Psicóloga Familiar. Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} {InfoContacto.name} - {InfoContacto.job}. Todos los derechos reservados.</p>
         <p className="legal-links">
           <Link to="/aviso-legal">Aviso Legal</Link>
           <Link to="/privacidad">Política de Privacidad</Link>

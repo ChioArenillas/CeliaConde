@@ -154,7 +154,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #8f2ed9;
+  background-color: var(--btn-hover);
   transform: translateY(-2px);
 }
 
@@ -205,9 +205,6 @@
     gap: 40px;
   }
 
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {

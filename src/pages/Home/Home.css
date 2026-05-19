@@ -5,20 +5,22 @@
   padding: 40px 20px;
 }
 
-.cta-button-hero {
-  background: var(--bg-dark);
-  color: var(--bg);
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.2s ease;
+/* HERO */
+.home-hero {
+  position: relative;
+  margin: 50px;
+  padding: 50px 80px 50px;
+  overflow: visible;
 }
 
-.cta-button-hero:hover {
-  transform: translateY(-3px);
-  background-color: var(--text);
-  color: var(--accent);
+.home-hero-image-wrapper img {
+  margin: -80px;
 }
 
+.hero-cta-button {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
 
 /* Especialidades */
 .especialidades {
@@ -120,86 +122,4 @@
   color: var(--accent);
   font-weight: 600;
   margin-top: auto;
-}
-
-/* CTA Final */
-.cta-final {
-  text-align: center;
-  padding: 60px 20px;
-  background: var(--bg-dark);
-  color: var(--text-light);
-}
-
-.cta-final h2 {
-  margin-bottom: 16px;
-  color: var(--text-light);
-}
-
-.cta-final p {
-  margin-bottom: 30px;
-  font-size: 18px;
-}
-
-.whatsapp-button {
-  display: inline-block;
-  padding: 16px 32px;
-  background-color: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 18px;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.whatsapp-button:hover {
-  background-color: #20bd5a;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 1024px) {
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero-image {
-    width: 250px;
-    height: 250px;
-  }
-
-  .home {
-    gap: 60px;
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-    margin: 0 auto;
-  }
-
-  .hero-image-wrapper {
-    order: -1;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero-image {
-    width: 200px;
-    height: 200px;
-  }
-
-  .cta-button,
-  .whatsapp-button {
-    padding: 14px 24px;
-    font-size: 16px;
-  }
 }

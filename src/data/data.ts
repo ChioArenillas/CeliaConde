@@ -10,6 +10,17 @@ import type {
 } from './types';
 import { FiWind, FiHeart, FiUsers, FiZap, FiCloudRain, FiDroplet, FiLock, FiSmile, FiBookOpen } from "react-icons/fi";
 
+export const InfoContacto: InfoContactoType = {
+  name: "Celia Conde",
+  job: "Psicóloga Familiar",
+  phone: "+34 600 000 000",
+  email: "contacto@celiaconde.com",
+  instagram: "@celiaconde.psicologia",
+  address: "Calle Mayor 12, 1ºA, Madrid",
+  whatsappLink: "https://wa.me/34600000000",
+  instagramLink: "https://instagram.com/tuusuario"
+};
+
 export const Especialidades: Especialidad[] = [
   {
     title: "Ansiedad",
@@ -60,15 +71,6 @@ export const Reviews: Review[] = [
     rating: 5
   }
 ];
-
-export const InfoContacto: InfoContactoType = {
-  phone: "+34 600 000 000",
-  email: "contacto@celiaconde.com",
-  instagram: "@celiaconde.psicologia",
-  address: "Calle Mayor 12, 1ºA, Madrid",
-  whatsappLink: "https://wa.me/34600000000",
-  instagramLink: "https://instagram.com/tuusuario"
-};
 
 export const Formacion: FormacionItem[] = [
   {

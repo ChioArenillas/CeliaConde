@@ -10,14 +10,15 @@
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #6920a1;
+  --btn-hover: #8f2ed9;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: 'Lato', system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: 'Playfair Display', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: 'Lato', system-ui, sans-serif;
+  --heading: 'Lato', system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -68,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading);
+  font-family: var(--sans);
   font-weight: 500;
   color: var(--text-h);
 }
@@ -79,7 +80,7 @@ h1 {
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 38px;
     margin: 20px 0;
   }
 }
@@ -90,7 +91,7 @@ h2 {
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 32px;
   }
 }
 
@@ -129,10 +130,29 @@ p {
 }
 
 .cta-button:hover {
-  background-color: var(--text);
+  background-color: var(--btn-hover);
   color: var(--code-bg);
   transform: translateY(-2px);
 }
+
+/* WHATSAPP BTN */
+.whatsapp-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.whatsapp-button:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+}
+
 
 /* HERO */
 .hero {
@@ -153,7 +173,7 @@ p {
 .hero-content h1 {
   font-size: 52px;
   line-height: 1.1;
-  color: var(--text-);
+  color: var(--text);
   max-width: 500px;
   margin-bottom: 24px;
 }
@@ -171,4 +191,50 @@ p {
   width: 100%;
   max-width: 380px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1024px) {
+
+  .hero-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home {
+    gap: 60px;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 100px;
+  }
+
+  .hero-content h1 {
+    margin: 0 auto;
+  }
+  .hero-image {
+    height: 250px ;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-image {
+    height: 200px;
+  }
+
+  .cta-button,
+  .whatsapp-button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
 }

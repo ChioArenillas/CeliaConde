@@ -25,13 +25,13 @@ export default function Home() {
 
   return (
     <div className="home">
-      <section className="hero">
-        <div className="hero-image-wrapper">
-          <img src={heroImg} alt="Psicóloga" />
+      <section className="home-hero hero">
+        <div className="home-hero-image-wrapper hero-image-wrapper">
+          <img src={heroImg} alt="Psicóloga" className="hero-image"/>
         </div>
         <div className="hero-content">
           <h1>Un espacio seguro para entenderte y avanzar.</h1>
-          <a href="contacto" className="cta-button cta-button-hero">
+          <a href="contacto" className="cta-button hero-cta-button">
             Reserva una primera sesión
           </a>
         </div>

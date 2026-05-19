@@ -1,5 +1,5 @@
 .header {
-    width: 100%;
+  width: 100%;
   position: sticky;
   top: 0;
   background: var(--bg-dark);
@@ -23,7 +23,7 @@
   color: var(--text-light);
 }
 .logo:hover{
-  color: var(--text-h);
+  color: var(--text);
 }
 
 .logo-text {
@@ -52,7 +52,7 @@
 }
 
 .nav-link:hover {
-  color: var(--text-h);
+  color: var(--text);
 }
 
 .nav-link.active {
@@ -77,19 +77,6 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
-  .header-container {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
 
 @media (max-width: 768px) {
   .header-container {
@@ -107,11 +94,7 @@
 
   .nav-link {
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 18px;
   }
 
-  .whatsapp-header {
-    width: 100%;
-    justify-content: center;
-  }
 }

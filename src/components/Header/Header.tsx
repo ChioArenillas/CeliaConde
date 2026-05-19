@@ -8,8 +8,8 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <span className="logo-text">Celia Conde</span>
-          <span className="logo-subtitle">Psicóloga Familiar</span>
+          <span className="logo-text">{InfoContacto.name}</span>
+          <span className="logo-subtitle">{InfoContacto.job}</span>
         </Link>
 
         <nav className="nav">

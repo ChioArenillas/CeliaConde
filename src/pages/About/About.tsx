@@ -1,6 +1,6 @@
 import "./About.css";
 import heroImg from "../../assets/CeliaCondeSmall.jpg";
-import { Formacion, Valores } from "../../data/data";
+import { Formacion, InfoContacto, Valores } from "../../data/data";
 
 export default function About() {
   const formacion = Formacion.map((formacion) => {
@@ -29,8 +29,8 @@ export default function About() {
     <div className="about">
       <section className="hero about-hero">
         <div className="hero-content">
-          <h1>Celia Conde</h1>
-          <h2>Psicóloga Familiar</h2>
+          <h1>{InfoContacto.name}</h1>
+          <h2>{InfoContacto.job}</h2>
         </div>
         <div className="hero-image-wrapper">
           <img src={heroImg} alt="Celia Conde - Psicóloga Familiar" />

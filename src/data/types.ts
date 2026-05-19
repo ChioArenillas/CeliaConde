@@ -1,5 +1,16 @@
 import type { IconType } from "react-icons";
 
+export interface InfoContactoType {
+  name: string;
+  job: string;
+  phone: string;
+  email: string;
+  instagram: string;
+  address: string;
+  whatsappLink: string;
+  instagramLink: string;
+}
+
 export interface Especialidad {
   title: string;
   description: string;
@@ -10,15 +21,6 @@ export interface Review {
   name: string;
   text: string;
   rating: number;
-}
-
-export interface InfoContactoType {
-  phone: string;
-  email: string;
-  instagram: string;
-  address: string;
-  whatsappLink: string;
-  instagramLink: string;
 }
 
 export interface FormacionItem {

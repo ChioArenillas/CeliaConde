@@ -181,19 +181,11 @@
     gap: 60px;
   }
 
-  .modalidades-grid,
-  .terapias-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
   .servicios {
     padding: 30px 15px;
-  }
-
-  .proceso-steps {
-    grid-template-columns: 1fr;
   }
 
   .modalidad-card,
