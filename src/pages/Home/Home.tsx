@@ -33,7 +33,7 @@ export default function Home() {
           </a>
         </div>
                 <div className="home-hero-image-wrapper hero-image-wrapper">
-          <img src={heroImg} alt="Psicóloga" className="hero-image"/>
+          <img src={heroImg} alt="Psicóloga"/>
         </div>
 
       </section>
