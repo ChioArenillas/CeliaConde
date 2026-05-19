@@ -204,7 +204,11 @@
   .contacto-content {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
+}
+.contacto-info{
+      width: 450px;
+      margin: 0 auto;
+}
 
 }
 
@@ -216,9 +220,18 @@
   .contacto-info,
   .contacto-formulario {
     padding: 30px 20px;
+
   }
 
   .faq-item {
     padding: 25px 20px;
+  }
+}
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .contacto-info {
+          width: 100%;
+
   }
 }

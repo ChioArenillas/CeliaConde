@@ -189,6 +189,8 @@ h3 {
 
 .hero-content h1 {
   margin-bottom: 24px;
+  font-size: clamp(3.5rem, 2vw, 2rem);
+
 
 }
 

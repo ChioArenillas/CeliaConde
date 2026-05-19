@@ -8,12 +8,15 @@ import Contacto from './pages/Contacto/Contacto'
 import Legal from './pages/Legal/AvisoLegal'
 import Privacidad from './pages/Legal/Privacidad'
 import Cookies from './pages/Legal/Cookies'
+import ScrollToTop from './components/scrollToTop'
 
 export default function App() {
 
   return (
     <>
     <BrowserRouter>
+      <ScrollToTop />
+
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element= {<Home />}/>

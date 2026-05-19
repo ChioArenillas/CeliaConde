@@ -19,19 +19,30 @@ export default function Contacto() {
     })
   }
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    alert('Gracias por tu mensaje. Me pondré en contacto contigo pronto.')
-    setFormData({
-      nombre: '',
-      email: '',
-      telefono: '',
-      asunto: '',
-      mensaje: ''
-    })
-  }
+const handleSubmit = (e: FormEvent) => {
+  e.preventDefault()
 
+  const form = e.target as HTMLFormElement
+
+  fetch("https://formsubmit.co/arenillasr@gmail.com", {
+    method: "POST",
+    body: new FormData(form),
+  })
+    .then(() => {
+      alert("Mensaje enviado correctamente")
+      setFormData({
+        nombre: '',
+        email: '',
+        telefono: '',
+        asunto: '',
+        mensaje: ''
+      })
+      form.reset()
+    })
+    .catch(() => {
+      alert("Error al enviar el mensaje")
+    })
+}
   const preguntas = FAQs.map(FAQ => {
     return (
           <div className="faq-item">
