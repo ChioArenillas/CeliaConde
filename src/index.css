@@ -251,7 +251,36 @@ h3 {
 
   transform: translateY(-4px);
 }
+.whatsapp-round { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  padding: 10px 10px; 
+  background-color: #25D366; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 100px; 
+  font-weight: 600; 
+  transition: background-color 0.2s, transform 0.2s; 
+} 
+  .whatsapp-round:hover { 
+    background-color: #20bd5a; 
+    transform: translateY(-2px); 
+  }
 
+.instagram {
+display: flex;
+  padding: 10px 10px;
+  background-color: #E1306C;
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.instagram:hover {
+  background-color: #c62b5f;
+  transform: translateY(-2px);
+}
 
 /* LEGAL */
 .legal-container{

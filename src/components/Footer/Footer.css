@@ -67,32 +67,8 @@
     margin-top: 12px;
 }
 
-.footer-whatsapp {
-  padding: 10px 10px;
-  background-color: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 100px;
-  transition: background-color 0.2s, transform 0.2s;
-}
 
-.footer-whatsapp:hover {
-  background-color: #20bd5a;
-  transform: translateY(-2px);
-}
-.footer-instagram {
-display: flex;
-  padding: 10px 10px;
-  background-color: #E1306C;
-  color: white;
-  text-decoration: none;
-  border-radius: 100px;
-  transition: background-color 0.2s, transform 0.2s;
-}
-.footer-instagram:hover {
-  background-color: #c62b5f;
-  transform: translateY(-2px);
-}
+
 
 
 .footer-bottom {

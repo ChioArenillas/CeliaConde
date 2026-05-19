@@ -94,8 +94,8 @@
   padding: 30px 20px;
   background: linear-gradient(
       135deg,
-      var(--bg-dark)20%,
-      var(--accent)40%
+      var(--code-bg)20%,
+      var(--accent)20%
   );
   color: var(--text-light);
   border: 1px solid var(--border);

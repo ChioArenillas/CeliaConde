@@ -31,13 +31,13 @@ export default function Footer() {
           <p>📧 {InfoContacto.email}</p>
           <p>📱 {InfoContacto.phone}</p>
           <div className='footer-icons'>
-                    <a href={InfoContacto.whatsappLink} className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <a href={InfoContacto.whatsappLink} className="whatsapp-round" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <FaWhatsapp size={28} />
         </a>
 
              <a
             href={InfoContacto.instagramLink}
-            className="footer-instagram"
+            className="instagram"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

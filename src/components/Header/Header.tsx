@@ -22,7 +22,7 @@ export default function Header() {
           <NavLink to="/contacto" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Contacto
           </NavLink>
-        <a href={InfoContacto.whatsappLink} className="whatsapp-header" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href={InfoContacto.whatsappLink} className="whatsapp-round" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <FaWhatsapp size={28} />
         </a>
 
