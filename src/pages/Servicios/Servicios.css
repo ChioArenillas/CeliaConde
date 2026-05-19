@@ -7,6 +7,7 @@
 .servicios-hero {
   display: flex;
   justify-content: center;
+  padding: 60px 70px;
 }
 
 /* Modalidades */
