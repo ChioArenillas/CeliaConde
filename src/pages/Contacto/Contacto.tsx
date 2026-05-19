@@ -19,25 +19,32 @@ export default function Contacto() {
     })
   }
 
-const handleSubmit = (e: FormEvent) => {
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault()
 
-  const form = e.target as HTMLFormElement
+  const form = e.currentTarget
 
   fetch("https://formsubmit.co/arenillasr@gmail.com", {
     method: "POST",
     body: new FormData(form),
+    headers: {
+      Accept: "application/json"
+    }
   })
-    .then(() => {
-      alert("Mensaje enviado correctamente")
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        asunto: '',
-        mensaje: ''
-      })
-      form.reset()
+    .then((response) => {
+      if (response.ok) {
+        alert("Mensaje enviado correctamente")
+        setFormData({
+          nombre: '',
+          email: '',
+          telefono: '',
+          asunto: '',
+          mensaje: ''
+        })
+        form.reset()
+      } else {
+        alert("Error al enviar el mensaje")
+      }
     })
     .catch(() => {
       alert("Error al enviar el mensaje")
@@ -114,6 +121,9 @@ const handleSubmit = (e: FormEvent) => {
         <div className="contacto-formulario">
           <h2>Envíame un mensaje</h2>
           <form onSubmit={handleSubmit}>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde la web" />
+            <input type="hidden" name="_template" value="table" />
             <div className="form-group">
               <label htmlFor="nombre">Nombre completo *</label>
               <input

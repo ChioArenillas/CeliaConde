@@ -117,7 +117,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   line-height: 1.3;
 }
 
@@ -138,8 +138,8 @@ h3 {
   background: linear-gradient(
     135deg,
     var(--bg-dark) 0%,
-    var(--accent) 30%,
-    var(--code-bg) 30%,
+    var(--accent) 70%,
+    var(--code-bg) 70%,
     var(--bg) 100%
   );
 
@@ -185,20 +185,22 @@ h3 {
 .hero-content {
   text-align: left;
   max-width: 560px;
+  
 }
 
 .hero-content h1 {
   margin-bottom: 24px;
   font-size: clamp(3.5rem, 2vw, 2rem);
-
-
 }
-
+.hero-content h1, 
+.hero-content h2, 
+.hero-content p{
+    color: var(--text-light);
+}
 
 .hero-content p {
   margin-bottom: 32px;
-  color: var(--text-h);
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.3rem, 1.5vw, 1.2rem);
 }
 
 /* BUTTONS */
@@ -267,8 +269,7 @@ h3 {
   html {
     font-size: 16px;
   }
-
-  .hero {
+.hero {
     grid-template-columns: 1fr;
 
     gap: 40px;
@@ -276,7 +277,16 @@ h3 {
     padding: 70px 40px 80px;
 
     text-align: center;
-  }
+
+  background: linear-gradient(
+    135deg,
+    var(--bg-dark) 0%,
+    var(--accent) 80%,
+    var(--code-bg) 70%,
+    var(--bg) 100%
+  );
+
+}
 
   .hero-content {
     margin: 0 auto;
