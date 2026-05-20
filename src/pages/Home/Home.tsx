@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <section className="home-hero hero">
+      <section className="home-hero hero reveal-item">
         <div className="hero-content">
           <h1>Un espacio seguro para entenderte y avanzar.</h1>
           <a href="contacto" className="cta-button hero-cta-button">
@@ -38,12 +38,12 @@ export default function Home() {
 
       </section>
 
-      <section className="especialidades">
+      <section className="especialidades reveal-item">
         <h2>Especialidades</h2>
         <div className="especialidades-grid">{especialidades}</div>
       </section>
 
-      <section className="como-trabaja">
+      <section className="como-trabaja reveal-item">
         <h2>Cómo trabajo</h2>
         <div className="como-trabaja-content">
           <p>
@@ -58,12 +58,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="testimonios">
+      <section className="testimonios reveal-item">
         <h2>Lo que dicen mis pacientes</h2>
         <div className="testimonios-grid">{reviews}</div>
       </section>
 
-      <section className="cta"> 
+      <section className="cta reveal-item"> 
         <h2>¿Listo/a para dar el primer paso?</h2>
         <p>Agenda tu primera sesión y comienza tu camino hacia el bienestar emocional.</p>
         <a href="/contacto" className="cta-button">Contactar Ahora</a>

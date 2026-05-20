@@ -27,7 +27,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <section className="hero about-hero">
+      <section className="hero about-hero reveal-item">
         <div className="hero-content">
           <h1>{InfoContacto.name}</h1>
           <h2>{InfoContacto.job}</h2>
@@ -40,6 +40,7 @@ export default function About() {
       </section>
 
       <section className="about-content">
+        <section className="reveal-item">
         <div className="about-text">
           <p>
             Hola, soy Celia Conde, psicóloga especializada en terapia familiar y
@@ -62,16 +63,17 @@ export default function About() {
             guiarte para que los descubras y los pongas en práctica.
           </p>
         </div>
+        </section>
 
-        <div className="about-credentials">
+        <section className="about-credentials reveal-item">
           <h2>Formación y Credenciales</h2>
           <ul className="credentials-list">{formacion}</ul>
-        </div>
+        </section>
 
-        <div className="about-values">
+        <section className="about-values reveal-item">
           <h2>Mis Valores</h2>
           <div className="values-grid">{values}</div>
-        </div>
+        </section>
       </section>
     </div>
   );

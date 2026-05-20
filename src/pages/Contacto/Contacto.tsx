@@ -62,14 +62,14 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   return (
     <div className="contacto">
 
-      <section className="hero contacto-hero">
+      <section className="hero contacto-hero reveal-item">
           <div className="hero-content">
           <h1>Contacto</h1>
         <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
         </div>
       </section>
 
-      <section className="contacto-content">
+      <section className="contacto-content reveal-item">
         <div className="contacto-info">
           <h2>Información de Contacto</h2>
 
@@ -118,7 +118,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
           </div>
         </div>
 
-        <div className="contacto-formulario">
+        <div className="contacto-formulario reveal-item">
           <h2>Envíame un mensaje</h2>
           <form onSubmit={handleSubmit}>
             <input type="hidden" name="_captcha" value="false" />
@@ -202,7 +202,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         </div>
       </section>
 
-      <section className="faq-section">
+      <section className="faq-section reveal-item">
         <h2>Preguntas Frecuentes</h2>
         <div className="faq-grid">
           {preguntas}

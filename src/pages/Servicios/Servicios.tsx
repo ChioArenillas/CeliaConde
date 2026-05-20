@@ -27,7 +27,7 @@ export default function Servicios() {
 
   return (
     <div className="servicios">
-      <section className="hero servicios-hero">
+      <section className="hero servicios-hero reveal-item">
           <div className="hero-content">
           <h1>Servicios</h1>
           <p>Acompañamiento psicológico profesional adaptado a tus necesidades.</p>
@@ -35,7 +35,7 @@ export default function Servicios() {
       </section>
 
 
-      <section className="modalidades">
+      <section className="modalidades reveal-item">
         <h2>Modalidades de Atención</h2>
         <div className="modalidades-grid">
           <div className="modalidad-card">
@@ -63,21 +63,21 @@ export default function Servicios() {
         </div>
       </section>
 
-      <section className="tipos-terapia">
+      <section className="tipos-terapia reveal-item">
         <h2>Tipos de Terapia</h2>
         <div className="terapias-grid">
           {terapias}
         </div>
       </section>
 
-      <section className="proceso">
+      <section className="proceso reveal-item">
         <h2>¿Cómo empezar?</h2>
         <div className="proceso-steps">
         {pasos}
         </div>
       </section>
 
-      <section className="cta"> 
+      <section className="cta reveal-item"> 
         <h2>¿Tienes dudas?</h2>
         <p>Estoy aquí para ayudarte. Contacta conmigo sin compromiso.</p>
         <a href="/contacto" className="cta-button">Contactar Ahora</a>
