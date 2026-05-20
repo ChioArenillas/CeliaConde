@@ -8,7 +8,7 @@ import Contacto from './pages/Contacto/Contacto'
 import Legal from './pages/Legal/AvisoLegal'
 import Privacidad from './pages/Legal/Privacidad'
 import Cookies from './pages/Legal/Cookies'
-import ScrollToTop from './components/scrollToTop'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
 
