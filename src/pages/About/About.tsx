@@ -31,6 +31,8 @@ export default function About() {
         <div className="hero-content">
           <h1>{InfoContacto.name}</h1>
           <h2>{InfoContacto.job}</h2>
+          <p> +9 años acompañándote a poner fin a relaciones familiares difíciles.</p>
+          <p>💜 sin culpa y con enfoque feminista.</p>
         </div>
         <div className="hero-image-wrapper">
           <img src={heroImg} alt="Celia Conde - Psicóloga Familiar" />

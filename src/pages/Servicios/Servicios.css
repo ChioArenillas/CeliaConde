@@ -1,9 +1,4 @@
-.servicios {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 40px 20px;
-}
+
 .servicios-hero {
   display: flex;
   justify-content: center;
@@ -178,16 +173,10 @@
 
 
 @media (max-width: 1024px) {
-  .servicios {
-    gap: 60px;
-  }
 
 }
 
 @media (max-width: 768px) {
-  .servicios {
-    padding: 30px 15px;
-  }
 
   .modalidad-card,
   .terapia-card {

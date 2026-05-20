@@ -7,11 +7,12 @@
 
 .footer-container {
   max-width: 1126px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
   gap: 60px;
   margin-bottom: 40px;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-brand h3 {

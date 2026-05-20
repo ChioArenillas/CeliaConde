@@ -13,12 +13,12 @@ import { FiWind, FiHeart, FiUsers, FiZap, FiCloudRain, FiDroplet, FiLock, FiSmil
 export const InfoContacto: InfoContactoType = {
   name: "Celia Conde",
   job: "Psicóloga Familiar",
-  phone: "+34 600 000 000",
-  email: "contacto@celiaconde.com",
-  instagram: "@celiaconde.psicologia",
-  address: "Calle Mayor 12, 1ºA, Madrid",
-  whatsappLink: "https://wa.me/34600000000",
-  instagramLink: "https://instagram.com/tuusuario"
+  phone: "+34 657 15 26 27",
+  email: "psicologiaceliaconde@gmail.com",
+  instagram: "@celiacondepsicologa",
+  address: "Calle del Aviador Zorita 4, 28020 Madrid",
+  whatsappLink: "https://wa.me/34657152627",
+  instagramLink: "https://www.instagram.com/celiacondepsicologa"
 };
 
 export const Especialidades: Especialidad[] = [

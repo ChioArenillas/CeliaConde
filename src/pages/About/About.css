@@ -1,8 +1,9 @@
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  padding: 40px 20px;
+.hero-image-wrapper {
+  min-height: 350px;
+}
+
+.hero-image-wrapper::before {
+  height: 120px;
 }
 
 .about-content {
@@ -75,6 +76,10 @@
   font-size: 16px;
 }
 
+.credentials-list li:hover{
+  background: var(--code-bg);
+}
+
 /* Valores */
 .about-values {
   text-align: center;
@@ -105,7 +110,8 @@
 
 .value-card:hover {
   box-shadow: var(--shadow);
-  transform: translateY(-4px);
+  /* transform: translateY(-4px); */
+  background: var(--accent);
 }
 
 .value-card h3 {
@@ -120,17 +126,16 @@
   font-size: 16px;
 }
 
+@media (max-width: 1024px) {
+  .hero-image-wrapper {
+  min-height: 150px;
+}
 
+.hero-image-wrapper::before {
+  height: 120px;
+}
+}
 @media (max-width: 768px) {
-  .about {
-    padding: 30px 15px;
-  }
-
-  .about-image {
-    width: 220px;
-    height: 220px;
-  }
-
   .about-credentials {
     padding: 30px 20px;
   }

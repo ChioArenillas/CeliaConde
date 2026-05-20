@@ -4,7 +4,7 @@
   top: 0;
   z-index: 100;
 
-  background: rgba(119, 66, 160, 0.95);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -17,15 +17,19 @@
   padding: 14px 20px;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 
-  gap: 30px;
+  gap: 10px;
 }
-
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px;
+}
 .logo {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 
   text-decoration: none;
   color: var(--text-light);
@@ -46,6 +50,10 @@
   font-size: 18px;
   font-weight: 400;
   opacity: 0.85;
+}
+.icons{
+  display: flex;
+  gap: 10px;
 }
 
 .nav {
@@ -88,8 +96,9 @@
     gap: 12px;
     padding: 12px 16px;
   }
-
-  .logo {
+  .top{
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     text-align: center;
   }

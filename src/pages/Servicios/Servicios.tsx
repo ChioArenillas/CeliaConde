@@ -30,7 +30,7 @@ export default function Servicios() {
       <section className="hero servicios-hero">
           <div className="hero-content">
           <h1>Servicios</h1>
-          <p>Acompañamiento psicológico profesional adaptado a tus necesidades</p>
+          <p>Acompañamiento psicológico profesional adaptado a tus necesidades.</p>
         </div>
       </section>
 

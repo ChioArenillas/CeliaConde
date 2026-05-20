@@ -1,76 +1,9 @@
-/* HOME */
-
-.home {
-  display: flex;
-  flex-direction: column;
-
-  gap: 120px;
-
-  padding: 40px 20px 100px;
-}
-
-/* HERO */
-
-.home-hero {
-  position: relative;
-
-  margin: 50px;
-
-  padding: 70px 80px 40px;
-
-  overflow: visible;
-}
-
-/* IMAGEN HERO */
-
-.home-hero-image-wrapper {
-  position: relative;
-
-  height: 520px;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.home-hero-image-wrapper::before {
-  content: "";
-
-  position: absolute;
-
-  width: 320px;
-  height: 320px;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  filter: blur(60px);
-
-  z-index: 0;
-}
-
-.home-hero-image-wrapper img {
-  position: absolute;
-
-  bottom: 0;
-
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-
-  object-fit: cover;
-
-  z-index: 2;
-
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
-
-  transform: translateY(70px);
-}
 
 /* HERO CONTENT */
 
 .hero-cta-button {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--code-bg);
+  color: var(--text);
 }
 
 /* ESPECIALIDADES */
@@ -108,11 +41,6 @@
     box-shadow 0.25s ease;
 }
 
-.especialidad-card:hover {
-  transform: translateY(-8px);
-
-  box-shadow: var(--shadow);
-}
 
 .especialidad-card svg {
   margin-bottom: 20px;
@@ -129,6 +57,17 @@
 .especialidad-card p {
   color: var(--text);
 }
+.especialidad-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: var(--shadow);
+}
+  .especialidad-card:hover svg,
+  .especialidad-card:hover h3{
+  color: var(--text);
+  }
+
+
 
 /* COMO TRABAJA */
 
@@ -237,71 +176,12 @@
 /* TABLET */
 
 @media (max-width: 1024px) {
-  .home {
-    gap: 90px;
-  }
 
-  .home-hero {
-    margin: 30px;
-
-    padding: 50px 40px 60px;
-  }
-
-  .home-hero-image-wrapper {
-    order: -1;
-
-    height: 320px;
-  }
-
-  .home-hero-image-wrapper img {
-    max-width: 320px;
-
-    transform: translateY(40px);
-  }
 }
 
 /* MOBILE */
 
 @media (max-width: 768px) {
-  .home {
-    gap: 70px;
-
-    padding: 20px 16px 80px;
-  }
-
-  .home-hero {
-    margin: 0;
-
-    padding: 30px 20px 50px;
-  }
-
-  .home-hero-image-wrapper {
-    height: 240px;
-
-    align-items: flex-start;
-  }
-
-  .home-hero-image-wrapper::before {
-    width: 220px;
-    height: 220px;
-  }
-
-  .home-hero-image-wrapper img {
-    max-width: 240px;
-    min-width: 200px;
-
-    transform: translateY(-30px);
-  }
-
-  .hero-content h1 {
-    font-size: clamp(2.2rem, 9vw, 3.2rem);
-
-    line-height: 1.05;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
 
   .especialidad-card,
   .testimonio-card {
@@ -312,27 +192,6 @@
 /* SMALL MOBILE */
 
 @media (max-width: 480px) {
-  .home {
-    gap: 50px;
-  }
-
-  .home-hero {
-    padding: 20px 16px 40px;
-  }
-
-  .home-hero-image-wrapper {
-    height: 200px;
-  }
-
-  .home-hero-image-wrapper img {
-    max-width: 210px;
-
-    transform: translateY(-40px);
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
 
   .cta {
     padding: 70px 20px;

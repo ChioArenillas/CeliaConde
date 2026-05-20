@@ -32,7 +32,7 @@ export default function Home() {
             Reserva una primera sesión
           </a>
         </div>
-                <div className="home-hero-image-wrapper hero-image-wrapper">
+                <div className="hero-image-wrapper">
           <img src={heroImg} alt="Psicóloga"/>
         </div>
 

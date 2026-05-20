@@ -1,10 +1,10 @@
-import { Link } from 'react-router'
-import './Footer.css'
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import { InfoContacto } from '../../data/data'
+import { Link } from "react-router";
+import "./Footer.css";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { InfoContacto } from "../../data/data";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -12,7 +12,10 @@ export default function Footer() {
         <div className="footer-brand">
           <h3>{InfoContacto.name}</h3>
           <p>{InfoContacto.job}</p>
-          <p className="footer-description">Acompañamiento psicológico profesional para ayudarte a encontrar tu bienestar emocional.</p>
+          <p className="footer-description">
+            Acompañamiento psicológico profesional para ayudarte a encontrar tu
+            bienestar emocional.
+          </p>
         </div>
 
         <div className="footer-links">
@@ -30,26 +33,45 @@ export default function Footer() {
           <p>📍 {InfoContacto.address}</p>
           <p>📧 {InfoContacto.email}</p>
           <p>📱 {InfoContacto.phone}</p>
-          <div className='footer-icons'>
-                    <a href={InfoContacto.whatsappLink} className="whatsapp-round" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <FaWhatsapp size={28} />
-        </a>
+          <div className="footer-icons">
+            <a
+              href={InfoContacto.whatsappLink}
+              className="whatsapp-round"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={28} />
+            </a>
 
-             <a
-            href={InfoContacto.instagramLink}
-            className="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <FaInstagram size={28} />
+            <a
+              href={InfoContacto.instagramLink}
+              className="instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={28} />
             </a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} {InfoContacto.name} - {InfoContacto.job}. Todos los derechos reservados.</p>
+        <p>
+          &copy; {currentYear} {InfoContacto.name} - {InfoContacto.job}. Todos
+          los derechos reservados.
+        </p>
+        <p>
+          Web diseñada y desarrollada por Rocio Arenillas ·{" "}
+          <a 
+            href="https://portfolio-rocio-arenillas.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver portfolio
+          </a>
+        </p>
         <p className="legal-links">
           <Link to="/legal">Aviso Legal</Link>
           <Link to="/privacidad">Política de Privacidad</Link>
@@ -57,5 +79,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }
