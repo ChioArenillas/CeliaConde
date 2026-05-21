@@ -1,8 +1,4 @@
-.contacto-hero {
-  display: flex;
-  justify-content: center;
-  padding: 60px 70px;
-}
+
 /* Contenido principal */
 .contacto-content-top {
   display: grid;

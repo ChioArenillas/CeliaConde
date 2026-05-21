@@ -205,7 +205,6 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../src/assets/paisaje1.jpg") center/cover no-repeat;
   z-index: 0;
   clip-path: polygon(0 0, 90% 0, 65% 100%, 0% 100%);
 }
@@ -270,6 +269,32 @@ h3 {
 .hero-content p {
   font-size: clamp(1.3rem, 1.5vw, 1.2rem);
 }
+
+.servicios-hero,
+.contacto-hero {
+  display: flex;
+  justify-content: center;
+  padding: 60px 70px;
+}
+.home-hero::before{
+    background: url("../src/assets/paisaje1.jpg") center/cover no-repeat;
+}
+.about-hero::before{
+    background: url("../src/assets/paisaje2.jpg") center/cover no-repeat;
+}
+.servicios-hero::before{
+    background: url("../src/assets/paisaje3.jpg") center/cover no-repeat;
+}
+.contacto-hero::before{
+    background: url("../src/assets/paisaje4.jpg") center/cover no-repeat;
+}
+
+.hero-cta-button {
+  background-color: var(--code-bg);
+  color: var(--text);
+  max-width: 350px;
+}
+
 /* BUTTONS */
 .cta-button,
 .whatsapp-button {
@@ -363,7 +388,7 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     gap: 0px;
-    padding: 60px 40px 0px;
+    padding: 40px 40px 0px;
     text-align: center;
   }
   .hero::before {
@@ -374,7 +399,7 @@ h3 {
 }
 
   .hero-content {
-    margin: 0 auto;
+    margin: 40px auto;
     text-align: center;
     align-items: center;
     order: 1;
