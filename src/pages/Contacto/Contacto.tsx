@@ -68,8 +68,9 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
         </div>
       </section>
+<div className="contacto-content">
 
-      <section className="contacto-content reveal-item">
+      <section className="contacto-content-top reveal-item">
         <div className="contacto-info">
           <h2>Información de Contacto</h2>
 
@@ -207,7 +208,10 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         <div className="faq-grid">
           {preguntas}
         </div>
+
       </section>
+              </div>
+
     </div>
   )
 }

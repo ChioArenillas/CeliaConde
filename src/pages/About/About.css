@@ -1,11 +1,6 @@
-.hero-image-wrapper {
-  min-height: 350px;
-}
-.hero-image-wrapper::before {
-  height: 120px;
-}
+
 .about-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -106,13 +101,8 @@
   font-size: 16px;
 }
 @media (max-width: 1024px) {
-  .hero-image-wrapper {
-  min-height: 150px;
 }
-.hero-image-wrapper::before {
-  height: 120px;
-}
-}
+
 @media (max-width: 768px) {
   .about-credentials {
     padding: 30px 20px;

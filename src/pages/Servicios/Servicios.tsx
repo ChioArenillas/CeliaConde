@@ -34,6 +34,7 @@ export default function Servicios() {
         </div>
       </section>
 
+<section className="servicios-content">
 
       <section className="modalidades reveal-item">
         <h2>Modalidades de Atención</h2>
@@ -82,6 +83,8 @@ export default function Servicios() {
         <p>Estoy aquí para ayudarte. Contacta conmigo sin compromiso.</p>
         <a href="/contacto" className="cta-button">Contactar Ahora</a>
       </section>
+      </section>
+
     </div>
   )
 }

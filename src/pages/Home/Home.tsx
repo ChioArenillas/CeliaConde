@@ -24,10 +24,10 @@ export default function Home() {
   });
 
   return (
-    <div className="home">
+    <section className="home">
       <section className="home-hero hero reveal-item">
         <div className="hero-content">
-          <h1>Un espacio seguro para entenderte y avanzar.</h1>
+          <h1>Te acompaño a poner fin a relaciones familiares difíciles.</h1>
           <a href="contacto" className="cta-button hero-cta-button">
             Reserva una primera sesión
           </a>
@@ -36,7 +36,7 @@ export default function Home() {
           <img src={heroImg} alt="Psicóloga" />
         </div>
       </section>
-
+    <section className="home-content">
       <section className="como-trabaja reveal-item">
         <h2>Cómo trabajo</h2>
         <div className="como-trabaja-content">
@@ -84,6 +84,7 @@ export default function Home() {
           Contactar Ahora
         </a>
       </section>
-    </div>
+    </section>
+    </section>
   );
 }
