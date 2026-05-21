@@ -1,4 +1,5 @@
 import CTA from "../../components/CTA/CTA";
+import Hero from "../../components/Hero/Hero";
 import { Pasos, Terapias } from "../../data/data";
 import "./Servicios.css";
 
@@ -34,14 +35,11 @@ export default function Servicios() {
 
   return (
     <div className="servicios">
-      <section className="hero servicios-hero reveal-item">
-        <div className="hero-content">
-          <h1>Servicios</h1>
-          <p>
-            Acompañamiento psicológico profesional adaptado a tus necesidades.
-          </p>
-        </div>
-      </section>
+<Hero
+  variant="servicios"
+  title="Servicios"
+  description="Acompañamiento psicológico profesional adaptado a tus necesidades."
+/>
 
       <section className="servicios-content">
         <section className="modalidades reveal-item">

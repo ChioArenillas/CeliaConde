@@ -1,7 +1,8 @@
 import { Especialidades, Reviews } from "../../data/data";
 import "./Home.css";
-import heroImg from "../../assets/CeliaConde.jpg";
+import heroImg from "/assets/CeliaConde.jpg";
 import CTA from "../../components/CTA/CTA";
+import Hero from "../../components/Hero/Hero";
 
 export default function Home() {
   const especialidades = Especialidades.map((especialidad) => {
@@ -26,17 +27,13 @@ export default function Home() {
 
   return (
     <section className="home">
-      <section className="home-hero hero reveal-item">
-        <div className="hero-content">
-          <h1>Te acompaño a poner fin a relaciones familiares difíciles.</h1>
-          <a href="contacto" className="cta-button hero-cta-button">
-            Reserva una primera sesión
-          </a>
-        </div>
-        <div className="hero-image-wrapper">
-          <img src={heroImg} alt="Psicóloga" />
-        </div>
-      </section>
+<Hero
+  variant="home"
+  title="Te acompaño a poner fin a relaciones familiares difíciles."
+  buttonText="Reserva una primera sesión"
+  buttonLink="/contacto"
+  image={heroImg}
+/>
       <section className="home-content">
         <section className="como-trabaja reveal-item">
           <h2>Cómo trabajo</h2>

@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import './Contacto.css'
 import { FAQs, InfoContacto } from '../../data/data'
 import { FaWhatsapp } from 'react-icons/fa'
+import Hero from '../../components/Hero/Hero'
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -62,12 +63,11 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   return (
     <div className="contacto">
 
-      <section className="hero contacto-hero reveal-item">
-          <div className="hero-content">
-          <h1>Contacto</h1>
-        <p>Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional.</p>
-        </div>
-      </section>
+<Hero
+  variant="contacto"
+  title="Contacto"
+  description="Estoy aquí para ayudarte. Da el primer paso hacia tu bienestar emocional."
+/>
 <div className="contacto-content">
 
       <section className="contacto-content-top reveal-item">

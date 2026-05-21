@@ -1,6 +1,7 @@
 import "./About.css";
-import heroImg from "../../assets/CeliaCondeSmall.jpg";
+import heroImg from "/assets/CeliaCondeSmall.jpg";
 import { Formacion, InfoContacto, Valores } from "../../data/data";
+import Hero from "../../components/Hero/Hero";
 
 export default function About() {
   const formacion = Formacion.map((formacion) => {
@@ -28,15 +29,12 @@ export default function About() {
 
   return (
     <div className="about">
-      <section className="hero about-hero reveal-item">
-        <div className="hero-content">
-          <h1>{InfoContacto.name}</h1>
-          <h2>{InfoContacto.job}</h2>
-        </div>
-        <div className="hero-image-wrapper">
-          <img src={heroImg} alt="Celia Conde - Psicóloga Familiar" />
-        </div>
-      </section>
+<Hero
+  variant="about"
+  title={InfoContacto.name}
+  subtitle={InfoContacto.job}
+  image={heroImg}
+/>
 
       <section className="about-content">
         <section className="reveal-item">

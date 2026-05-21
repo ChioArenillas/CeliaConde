@@ -189,111 +189,7 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
-/* HERO */
-.hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 40px 140px;
-  gap: 50px;
-  margin-bottom: 80px;
-  background: var(--code-bg);
-  overflow:visible;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  clip-path: polygon(0 0, 90% 0, 65% 100%, 0% 100%);
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    var(--bg-dark),
-    var(--accent)
-  );
-  opacity: 0.6;
-  z-index: 1;
-  clip-path: polygon(0 0, 90% 0, 65% 100%, 0% 100%);
-}
-.hero-content,
-.hero-image-wrapper {
-  position: relative;
-  z-index: 2;
-}
-.hero-image-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.hero-image-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  background: rgba(255, 255, 255, 0.15);
-  filter: blur(60px);
-  z-index: 0;
-}
-.hero-image-wrapper img {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  object-fit: cover;
-  z-index: 2;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
-  transform: translateY(80px);
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  width: 100%;
-  max-width: 560px;
-}
-.hero-content h1 {
-  margin-bottom: 24px;
-  font-size: clamp(3.3rem, 1.8vw, 1.8rem);
-}
-.hero-content h1,
-.hero-content h2,
-.hero-content p {
-  color: var(--text-light);
-}
-.hero-content p {
-  font-size: clamp(1.3rem, 1.5vw, 1.2rem);
-}
 
-.servicios-hero,
-.contacto-hero {
-  display: flex;
-  justify-content: center;
-  padding: 60px 70px;
-}
-.home-hero::before{
-    background: url("../src/assets/paisaje1.jpg") center/cover no-repeat;
-}
-.about-hero::before{
-    background: url("../src/assets/paisaje2.jpg") center/cover no-repeat;
-}
-.servicios-hero::before{
-    background: url("../src/assets/paisaje3.jpg") center/cover no-repeat;
-}
-.contacto-hero::before{
-    background: url("../src/assets/paisaje4.jpg") center/cover no-repeat;
-}
-
-.hero-cta-button {
-  background-color: var(--code-bg);
-  color: var(--text);
-  max-width: 350px;
-}
 
 /* BUTTONS */
 .cta-button,
@@ -385,34 +281,6 @@ h3 {
     gap: 80px;
     padding: 40px 20px 100px;
   }
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 0px;
-    padding: 40px 40px 0px;
-    text-align: center;
-  }
-  .hero::before {
-  clip-path: polygon(0 0, 120% 0, 65% 100%, 0% 100%);
-}
-.hero::after {
-  clip-path: polygon(0 0, 120% 0, 65% 100%, 0% 100%);
-}
-
-  .hero-content {
-    margin: 40px auto;
-    text-align: center;
-    align-items: center;
-    order: 1;
-  }
-  .hero-image-wrapper {
-    order: 2;
-    min-height: 240px;
-    min-width: unset;
-  }
-  .hero-image-wrapper img {
-    max-width: 240px;
-    transform: translateY(60px);
-  }
 }
 /* MOBILE */
 @media (max-width: 768px) {
@@ -425,32 +293,6 @@ h3 {
   .contacto-content {
     gap: 70px;
     padding: 20px 16px 80px;
-  }
-      .hero::before {
-  clip-path: polygon(0 0, 140% 0, 70% 100%, 0% 100%);
-}
-.hero::after {
-  clip-path: polygon(0 0, 140% 0, 70% 100%, 0% 100%);
-}
-
-
-  .hero-content h1 {
-    font-size: clamp(2.4rem, 9vw, 3.2rem);
-    line-height: 1.05;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .hero-image-wrapper {
-    min-height: 250px;
-  }
-  .hero-image-wrapper::before {
-    width: 220px;
-    height: 220px;
-  }
-  .hero-image-wrapper img {
-    max-width: 250px;
-    transform: translateY(50px);
   }
   .cta-button,
   .whatsapp-button {
@@ -467,19 +309,5 @@ h3 {
   .servicios-content,
   .contacto-content {
     gap: 50px;
-  }
-  .hero {
-    padding: 30px 16px 0px;
-    margin-bottom: 40px;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-image-wrapper {
-    min-height: 220px;
-  }
-  .hero-image-wrapper img {
-    max-width: 220px;
-    transform: translateY(40px);
   }
 }
