@@ -202,7 +202,20 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
           </form>
         </div>
       </section>
+<section className="contacto-map reveal-item">
+  <h2>Cómo llegar</h2>
 
+  <div className="map-wrapper">
+    <iframe
+      src={InfoContacto.mapLink}
+      width="100%"
+      height="300"
+      style={{ border: 0 }}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</section>
       <section className="faq-section reveal-item">
         <h2>Preguntas Frecuentes</h2>
         <div className="faq-grid">

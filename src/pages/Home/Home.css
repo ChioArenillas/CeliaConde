@@ -93,21 +93,6 @@
   color: var(--accent);
   font-weight: 700;
 }
-/* CTA FINAL */
-.cta {
-  text-align: center;
-  padding: 90px 30px;
-  background: linear-gradient(135deg, var(--bg-dark), var(--accent));
-  color: var(--text-light);
-}
-.cta h2 {
-  margin-bottom: 16px;
-  color: var(--text-light);
-}
-.cta p {
-  margin-bottom: 34px;
-  color: var(--text-light);
-}
 /* TABLET */
 @media (max-width: 1024px) {
 }

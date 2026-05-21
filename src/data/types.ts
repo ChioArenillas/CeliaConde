@@ -8,6 +8,7 @@ export interface InfoContactoType {
   email: string;
   instagram: string;
   address: string;
+  mapLink: string;
   whatsappLink: string;
   instagramLink: string;
 }

@@ -18,6 +18,7 @@ export const InfoContacto: InfoContactoType = {
   email: "psicologiaceliaconde@gmail.com",
   instagram: "@celiacondepsicologa",
   address: "Calle del Aviador Zorita 4, 28020 Madrid",
+  mapLink: "https://www.google.com/maps?q=Positivamente+Centro+de+Psicología&output=embed",
   whatsappLink: "https://wa.me/34657152627",
   instagramLink: "https://www.instagram.com/celiacondepsicologa"
 };
