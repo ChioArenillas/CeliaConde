@@ -8,6 +8,7 @@ export default function About() {
       <li>
         <strong>{formacion.title}</strong>
         <span>{formacion.description}</span>
+        <span>{formacion.year}</span>
       </li>
     );
   });
@@ -31,7 +32,10 @@ export default function About() {
         <div className="hero-content">
           <h1>{InfoContacto.name}</h1>
           <h2>{InfoContacto.job}</h2>
-          <p> +9 años acompañándote a poner fin a relaciones familiares difíciles.</p>
+          <p>
+            {" "}
+            +9 años acompañándote a poner fin a relaciones familiares difíciles.
+          </p>
           <p>💜 sin culpa y con enfoque feminista.</p>
         </div>
         <div className="hero-image-wrapper">
@@ -41,33 +45,50 @@ export default function About() {
 
       <section className="about-content">
         <section className="reveal-item">
-        <div className="about-text">
-          <p>
-            Hola, soy Celia Conde, psicóloga especializada en terapia familiar y
-            de pareja. Mi objetivo es acompañarte en tu proceso de crecimiento
-            personal y ayudarte a encontrar el equilibrio emocional que
-            necesitas.
-          </p>
-
-          <p>
-            Con años de experiencia en el ámbito clínico, he tenido la
-            oportunidad de trabajar con numerosas familias y parejas,
-            ayudándoles a superar conflictos, mejorar su comunicación y
-            fortalecer sus vínculos afectivos.
-          </p>
-
-          <p>
-            Mi enfoque terapéutico se basa en la empatía, el respeto y la
-            confidencialidad. Creo firmemente que cada persona tiene los
-            recursos necesarios para superar sus dificultades, y mi trabajo es
-            guiarte para que los descubras y los pongas en práctica.
-          </p>
-        </div>
+          <div className="about-text">
+            <p>
+              Hola soy Celia, soy psicóloga licenciada por la Universidad Pontificia de
+              Comillas. Realicé mi especialidad en psicoterapia con el Máster en
+              terapia Familiar y de Pareja (Universidad Pontificia de Comillas)
+              y con la formación en Especialista en Psicoterapia y Psicodrama
+              (Asociación para el Estudio de la Psicoterapia y el Psicodrama).
+            </p>
+            <p>
+              Posteriormente, he desarrollado mi carrera profesional enfocada al
+              estudio, análisis y aplicación de la perspectiva género. Para mí
+              fue un punto de inflexión hacerme Experta en Violencia de Género
+              (prevención, detección y atención), así como profundizar en la
+              Terapia Feminista y Transformación Social y la Formación en
+              Igualdad de Género. Durante varios años he trabajado como
+              psicóloga en la Red de Espacios de Igualdad del Ayuntamiento de
+              Madrid (Espacio de Igualdad Hermanas Mirabal).
+            </p>
+          </div>
         </section>
 
         <section className="about-credentials reveal-item">
           <h2>Formación y Credenciales</h2>
           <ul className="credentials-list">{formacion}</ul>
+        </section>
+        <section className="reveal-item">
+          <div className="about-text">
+            <p>
+              Mi profesión me apasiona y actualmente trabajo en consulta
+              privada, atendiendo en terapia individual, de pareja y familia.
+              Desde el inicio de mi actividad profesional soy psicóloga
+              colegiada Nº {InfoContacto.colegiada} y acreditada como Psicóloga
+              Sanitaria por la Consejería de Sanidad de la Comunidad de Madrid.
+            </p>
+            <p>
+              Me encanta la formación y desde el Espacio de Igualdad participé
+              como docente en la formación de Promotoras/es de Igualdad en la
+              asignatura “Salud y género”. Además, he sido invitada a dos
+              promociones del Máster Universitario en Evaluación e Intervención
+              de Adolescentes en Conflicto del Centro Universitario Cardenal
+              Cisneros, para impartir la sesión clínica “Prevención de la
+              Violencia de Género en Adolescentes”.
+            </p>
+          </div>
         </section>
 
         <section className="about-values reveal-item">

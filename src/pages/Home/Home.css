@@ -1,4 +1,15 @@
-/* HERO CONTENT */
+/* HERO */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--bg-dark) 0%,
+    var(--accent) 70%,
+    var(--code-bg) 70%,
+    var(--bg) 100%
+  );
+  overflow: visible;
+}
+
 .hero-cta-button {
   background-color: var(--code-bg);
   color: var(--text);

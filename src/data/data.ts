@@ -13,6 +13,7 @@ import { FiWind, FiHeart, FiUsers, FiZap, FiCloudRain, FiDroplet, FiLock, FiSmil
 export const InfoContacto: InfoContactoType = {
   name: "Celia Conde",
   job: "Psicóloga Familiar",
+  colegiada: "M-29410",
   phone: "+34 657 15 26 27",
   email: "psicologiaceliaconde@gmail.com",
   instagram: "@celiacondepsicologa",
@@ -74,25 +75,31 @@ export const Reviews: Review[] = [
 
 export const Formacion: FormacionItem[] = [
   {
-    title: "Grado en Psicología",
-    description: "Universidad Complutense de Madrid",
-    year: "2015"
+    title: "Licenciatura en Psicología",
+    description: "Universidad Pontificia de Comillas",
+    year: "2014"
   },
   {
-    title: "Máster en Psicología Clínica y de la Salud",
-    description: "Colegio Oficial de Psicólogos",
+    title: "Master en terapia familiar y de pareja",
+    description: "Universidad Pontificia de Comillas",
     year: "2017"
   },
   {
-    title: "Especialista en Terapia Familiar Sistémica",
-    description: "Instituto de Terapia Familiar",
+    title: "Especialista en Psicoterapia y Psicodrama",
+    description: "Asociación para el Estudio de la Psicoterapia y el Psicodrama",
     year: "2019"
   },
   {
-    title: "Nº Colegiada M-12345",
-    description: "Colegio Oficial de Psicólogos de Madrid",
-    year: "En vigor"
-  }
+    title: "Experta en violencia de género",
+    description: "XXX",
+    year: "2019"
+  },
+  
+  // {
+  //   title: `Nº Colegiada ${InfoContacto.colegiada}`,
+  //   description: "Colegio Oficial de Psicólogos de Madrid",
+  //   year: "En vigor"
+  // }
 ];
 
 export const Valores: Valor[] = [

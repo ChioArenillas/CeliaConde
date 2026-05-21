@@ -3,6 +3,7 @@ import type { IconType } from "react-icons";
 export interface InfoContactoType {
   name: string;
   job: string;
+  colegiada: string;
   phone: string;
   email: string;
   instagram: string;
