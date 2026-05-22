@@ -5,8 +5,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import Hero from "../../components/Hero/Hero";
 import emailjs from "@emailjs/browser";
 
-/* Los datos del formulario nombre, email, telefono, asunto, mensaje si se cambian hay que cambiar la configuración
-de EmailJS */
+/* Los datos del formulario nombre, email, telefono, asunto, mensaje si se cambian hay que 
+cambiar la configuración de EmailJS */
 export default function Contacto() {
   const [formData, setFormData] = useState({
     nombre: "",

@@ -1,3 +1,4 @@
+import { InfoContacto } from "../../data/data";
 import "./Legal.css"
 
 export default function Legal() {
@@ -13,11 +14,11 @@ export default function Legal() {
 
       <h2>Titular</h2>
       <p>
-        Nombre: Celia Conde<br />
+        Nombre: {InfoContacto.name}<br />
         Profesión: Psicóloga General Sanitaria<br />
-        Nº colegiada: M-12345 <br />
-        Email: contacto@tudominio.com<br />
-        Ubicación: Madrid, España
+        Nº colegiada: {InfoContacto.colegiada} <br />
+        Email: {InfoContacto.email}<br />
+        Ubicación: {InfoContacto.address}
       </p>
 
       <h2>Condiciones de uso</h2>
