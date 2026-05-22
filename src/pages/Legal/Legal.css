@@ -1,0 +1,10 @@
+/* LEGAL */
+.legal-container {
+  max-width: 800px;
+  margin: 50px;
+  padding: 40px 20px;
+}
+.legal-container p,
+.legal-container h1 {
+  margin-bottom: 10px;
+}

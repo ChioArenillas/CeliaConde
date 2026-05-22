@@ -1,3 +1,4 @@
+import "./Legal.css"
 
 export default function Privacidad() {
   return (

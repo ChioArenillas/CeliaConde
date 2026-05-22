@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 /* VERDE NEUTRO*/
-/* 
+
  :root {
   --text: #3f4a45;
   --text-h: #1f2b26;
@@ -49,9 +49,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 /* MORADO */
-:root {
+/* :root {
   --text: #6b6375;
   --text-h: #18141f;
   --text-light: #f4f3ec;
@@ -73,7 +73,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 /* MORADO NEUTRO */
 /* :root {
   --text: #4b4453;
@@ -259,16 +259,7 @@ h3 {
   background-color: #c62b5f;
   transform: translateY(-2px);
 }
-/* LEGAL */
-.legal-container {
-  max-width: 800px;
-  margin: 50px;
-  padding: 40px 20px;
-}
-.legal-container p,
-.legal-container h1 {
-  margin-bottom: 10px;
-}
+
 /* TABLET */
 @media (max-width: 1024px) {
   html {
