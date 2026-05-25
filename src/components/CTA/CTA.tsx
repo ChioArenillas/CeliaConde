@@ -1,5 +1,5 @@
 import "./CTA.css";
-import Button from "../Buttons/Buttons";
+import { Link } from "react-router";
 
 type CTAProps = {
   title: string;
@@ -12,11 +12,10 @@ export default function CTA({ title, description }: CTAProps) {
       <h2>{title}</h2>
       <p>{description}</p>
 
-      <Button
-        buttonClass="cta-button"
-        buttonText="Contactar Ahora"
-        buttonLink="/contacto"
-      />
+      <Link
+        className="cta-button"
+        to="/contacto"
+      >Contactar Ahora</Link>
     </section>
   );
 }
