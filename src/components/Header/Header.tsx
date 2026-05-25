@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { InfoContacto } from "../../data/data";

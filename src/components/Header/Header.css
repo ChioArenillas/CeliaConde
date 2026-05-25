@@ -32,6 +32,11 @@
 .logo:hover {
   opacity: 0.8;
 }
+.logo:visited,
+.logo:active,
+.logo:focus {
+  color: var(--text-light);
+}
 .logo-text {
   font-size: 24px;
   font-weight: 700;
