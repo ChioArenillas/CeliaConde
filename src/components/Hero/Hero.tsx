@@ -1,5 +1,5 @@
 import "../Hero/Hero.css";
-import Button from "../Buttons/Buttons";
+import { Link } from "react-router";
 
 type HeroProps = {
   variant?: "home" | "about" | "servicios" | "contacto";
@@ -30,11 +30,9 @@ export default function Hero({
         {description && <p>{description}</p>}
 
         {buttonText && buttonLink && (
-          <Button
-            buttonClass="cta-button hero-cta-button"
-            buttonLink={buttonLink}
-            buttonText={buttonText}
-          />
+          <Link className="cta-button hero-cta-button" to={buttonLink}>
+            {buttonText}
+          </Link>
         )}
       </div>
 
