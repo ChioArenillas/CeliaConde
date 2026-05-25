@@ -1,5 +1,5 @@
 import "./CTA.css";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 type CTAProps = {
   title: string;

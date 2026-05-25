@@ -1,5 +1,5 @@
 import "../Hero/Hero.css";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 type HeroProps = {
   variant?: "home" | "about" | "servicios" | "contacto";
