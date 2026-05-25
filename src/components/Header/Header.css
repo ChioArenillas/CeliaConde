@@ -43,7 +43,6 @@
 }
 .icons{
   display: flex;
-  gap: 10px;
 }
 .nav {
   display: flex;
@@ -62,11 +61,11 @@
   transition: all 0.25s ease;
 }
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--text);
   transform: translateY(-1px);
 }
 .nav-link.active {
-  color: var(--accent);
+  color: var(--text);
 }
 /* TABLET / MOBILE */
 @media (max-width: 768px) {

@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router";
 import "./Header.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { InfoContacto } from "../../data/data";
+import Button from "../Buttons/Buttons";
 
 export default function Header() {
   return (
@@ -13,24 +14,20 @@ export default function Header() {
             <span className="logo-subtitle">{InfoContacto.job}</span>
           </Link>
           <div className="icons">
-            <a
-              href={InfoContacto.whatsappLink}
-              className="whatsapp-round"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp size={28} />
-            </a>
-            <a
-              href={InfoContacto.instagramLink}
-              className="instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FaInstagram size={28} />
-            </a>
+            <Button
+                buttonLink={InfoContacto.whatsappLink}
+                buttonClass= "whatsapp-round wa-header"
+                target="_blank"
+                rel="noopener noreferrer"
+                buttonText={<FaWhatsapp size={32} />}
+            />            
+            <Button
+                buttonLink={InfoContacto.instagramLink}
+                buttonClass= "instagram ig-header"
+                target="_blank"
+                rel="noopener noreferrer"
+                buttonText={<FaInstagram size={32} />}
+            />
           </div>
         </div>
 

@@ -89,8 +89,6 @@ export default function Servicios() {
         <CTA
           title="¿Tienes dudas?"
           description="Estoy aquí para ayudarte. Contacta conmigo sin compromiso."
-          buttonText="Contactar Ahora"
-          href="/contacto"
         />{" "}
       </section>
     </div>

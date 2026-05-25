@@ -1,10 +1,12 @@
-import "../Hero/Hero.css"
+import "../Hero/Hero.css";
+import Button from "../Buttons/Buttons";
 
 type HeroProps = {
   variant?: "home" | "about" | "servicios" | "contacto";
   title: string;
   subtitle?: string;
   description?: string;
+  buttonClass?: string;
   buttonText?: string;
   buttonLink?: string;
   image?: string;
@@ -28,13 +30,15 @@ export default function Hero({
         {description && <p>{description}</p>}
 
         {buttonText && buttonLink && (
-          <a href={buttonLink} className="cta-button hero-cta-button">
-            {buttonText}
-          </a>
+          <Button
+            buttonClass="cta-button hero-cta-button"
+            buttonLink={buttonLink}
+            buttonText={buttonText}
+          />
         )}
       </div>
 
-      {image && variant !== "servicios" && variant !== "contacto" &&(
+      {image && variant !== "servicios" && variant !== "contacto" && (
         <div className="hero-image-wrapper">
           <img src={image} alt={title} />
         </div>

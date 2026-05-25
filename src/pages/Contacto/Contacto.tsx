@@ -4,6 +4,7 @@ import { FAQs, InfoContacto } from "../../data/data";
 import { FaWhatsapp } from "react-icons/fa";
 import Hero from "../../components/Hero/Hero";
 import emailjs from "@emailjs/browser";
+import Button from "../../components/Buttons/Buttons";
 
 /* Los datos del formulario nombre, email, telefono, asunto, mensaje si se cambian hay que 
 cambiar la configuración de EmailJS */
@@ -16,14 +17,14 @@ export default function Contacto() {
     mensaje: "",
   });
   const isValidEmail = (email: string) => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return regex.test(email)
-}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
 
-const isValidPhone = (phone: string) => {
-  const regex = /^[+]?[\d\s()-]{9,}$/
-  return regex.test(phone.trim())
-}
+  const isValidPhone = (phone: string) => {
+    const regex = /^[+]?[\d\s()-]{9,}$/;
+    return regex.test(phone.trim());
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -36,57 +37,56 @@ const isValidPhone = (phone: string) => {
     });
   };
 
-const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-  e.preventDefault()
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  if (!isValidEmail(formData.email)) {
-    alert("Introduce un email válido")
-    return
-  }
+    if (!isValidEmail(formData.email)) {
+      alert("Introduce un email válido");
+      return;
+    }
 
-  if (!isValidPhone(formData.telefono)) {
-    alert("Introduce un teléfono válido")
-    return
-  }
+    if (!isValidPhone(formData.telefono)) {
+      alert("Introduce un teléfono válido");
+      return;
+    }
 
-  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-  if (!serviceID || !templateID || !publicKey) {
-    alert("Faltan variables de configuración de EmailJS")
-    return
-  }
+    if (!serviceID || !templateID || !publicKey) {
+      alert("Faltan variables de configuración de EmailJS");
+      return;
+    }
 
-  try {
-    await emailjs.send(
-      serviceID,
-      templateID,
-      {
-        nombre: formData.nombre,
-        email: formData.email,
-        telefono: formData.telefono,
-        asunto: formData.asunto,
-        mensaje: formData.mensaje
-      },
-      publicKey
-    )
+    try {
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          nombre: formData.nombre,
+          email: formData.email,
+          telefono: formData.telefono,
+          asunto: formData.asunto,
+          mensaje: formData.mensaje,
+        },
+        publicKey,
+      );
 
-    alert('Mensaje enviado correctamente')
+      alert("Mensaje enviado correctamente");
 
-    setFormData({
-      nombre: '',
-      email: '',
-      telefono: '',
-      asunto: '',
-      mensaje: ''
-    })
-
-  } catch (error) {
-    console.error(error)
-    alert('Error al enviar el mensaje')
-  }
-}
+      setFormData({
+        nombre: "",
+        email: "",
+        telefono: "",
+        asunto: "",
+        mensaje: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Error al enviar el mensaje");
+    }
+  };
 
   const preguntas = FAQs.map((FAQ) => {
     return (
@@ -146,16 +146,21 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
             </div>
 
             <div className="whatsapp-fixed">
-              <a
-                href={InfoContacto.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-btn"
-              >
-                <span className="whatsapp-icon">
-                  <FaWhatsapp size={28} />
-                </span>
-                Contactar por WhatsApp
+              <a target="_blank" rel="noopener noreferrer">
+                <Button
+                  buttonClass="whatsapp-btn"
+                  buttonLink={InfoContacto.whatsappLink}
+                  buttonText={
+                    <>
+                      <span className="whatsapp-icon">
+                        <FaWhatsapp size={28} />
+                      </span>{" "}
+                      Contactar por WhatsApp
+                    </>
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
               </a>
             </div>
           </div>
@@ -236,10 +241,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
                   placeholder="Cuéntame brevemente en qué puedo ayudarte..."
                 />
               </div>
-
-              <button type="submit" className="submit-btn">
-                Enviar Mensaje
-              </button>
+              <Button
+                buttonClass="submit-btn"
+                type="submit"
+                buttonText="Enviar Mensaje"
+              />
             </form>
           </div>
         </section>

@@ -75,8 +75,6 @@ export default function Home() {
         <CTA
           title="¿Listo/a para dar el primer paso?"
           description="Agenda tu primera sesión y comienza tu camino hacia el bienestar emocional."
-          buttonText="Contactar Ahora"
-          href="/contacto"
         />
       </section>
     </section>

@@ -1,0 +1,79 @@
+/* BUTTONS */
+.cta-button,
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.cta-button {
+  background: var(--code-bg);
+  color: var(--accent);
+  box-shadow: 0 10px 30px rgba(105, 32, 161, 0.22);
+}
+.cta-button:hover {
+  transform: translateY(-4px);
+  background: var(--btn-hover);
+  color: var(--text-light);
+}
+.whatsapp-button {
+  color: var(--text-light);
+}
+.whatsapp-button:hover {
+  transform: translateY(-4px);
+}
+.whatsapp-round {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+.whatsapp-round:hover {
+  transform: translateY(-2px);
+}
+.wa-header{
+  color: var(--text-light);
+}
+.wa-header:hover{
+    color:var(--text)
+}
+.wa-footer:hover{
+    color:var(--accent)
+}
+
+.instagram {
+  display: flex;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 100px;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+.instagram:hover {
+  transform: translateY(-2px);
+}
+.ig-header{
+  color: var(--text-light);
+}
+.ig-header:hover{
+    color:var(--text)
+}
+.ig-footer:hover{
+    color:var(--accent)
+}

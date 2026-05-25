@@ -1,26 +1,22 @@
-import "./CTA.css"
+import "./CTA.css";
+import Button from "../Buttons/Buttons";
 
 type CTAProps = {
   title: string;
   description: string;
-  buttonText: string;
-  href: string;
 };
 
-export default function CTA({
-  title,
-  description,
-  buttonText,
-  href,
-}: CTAProps) {
+export default function CTA({ title, description }: CTAProps) {
   return (
     <section className="cta reveal-item">
       <h2>{title}</h2>
       <p>{description}</p>
 
-      <a href={href} className="cta-button">
-        {buttonText}
-      </a>
+      <Button
+        buttonClass="cta-button"
+        buttonText="Contactar Ahora"
+        buttonLink="/contacto"
+      />
     </section>
   );
 }
