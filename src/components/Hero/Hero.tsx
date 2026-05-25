@@ -1,5 +1,5 @@
 import "../Hero/Hero.css";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 type HeroProps = {
   variant?: "home" | "about" | "servicios" | "contacto";
@@ -30,9 +30,10 @@ export default function Hero({
         {description && <p>{description}</p>}
 
         {buttonText && buttonLink && (
-          <Link className="cta-button hero-cta-button" to={buttonLink}>
+          <NavLink className="cta-button hero-cta-button" 
+            to={buttonLink}>
             {buttonText}
-          </Link>
+          </NavLink>
         )}
       </div>
 

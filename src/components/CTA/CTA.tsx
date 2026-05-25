@@ -1,5 +1,5 @@
 import "./CTA.css";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 type CTAProps = {
   title: string;
@@ -12,9 +12,9 @@ export default function CTA({ title, description }: CTAProps) {
       <h2>{title}</h2>
       <p>{description}</p>
 
-      <Link className="cta-button" to="/contacto">
+      <NavLink className="cta-button" to="/contacto">
         Contactar Ahora
-      </Link>
+      </NavLink>
     </section>
   );
 }
