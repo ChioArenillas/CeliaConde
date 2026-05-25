@@ -31,23 +31,48 @@ export default function Footer() {
 
         <div className="footer-contact">
           <h4>Contacto</h4>
-          <p>📍 {InfoContacto.address}</p>
-          <p>📧 {InfoContacto.email}</p>
-          <p>📱 {InfoContacto.phone}</p>
           <div className="footer-icons">
             <Button
-                buttonLink={InfoContacto.whatsappLink}
-                buttonClass= "whatsapp-round wa-footer"
-                target="_blank"
-                rel="noopener noreferrer"
-                buttonText={<FaWhatsapp size={32} />}
-            />            
+              buttonLink={InfoContacto.whatsappLink}
+              buttonClass="whatsapp-round wa-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              buttonText={<FaWhatsapp size={32} />}
+            />
             <Button
-                buttonLink={InfoContacto.instagramLink}
-                buttonClass= "instagram ig-footer"
-                target="_blank"
-                rel="noopener noreferrer"
-                buttonText={<FaInstagram size={32} />}
+              buttonLink={InfoContacto.instagramLink}
+              buttonClass="instagram ig-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              buttonText={<FaInstagram size={32} />}
+            />
+          </div>
+          <p>
+            📱 <a href={InfoContacto.phoneLink}>{InfoContacto.phone}</a>
+          </p>
+          <p>
+            📧 <a href={InfoContacto.emailLink}>{InfoContacto.email}</a>
+          </p>
+        </div>
+        <div className="footer-contact">
+          <h4>Dirección</h4>
+          <p>
+            📍{" "}
+            <a
+              href={InfoContacto.addressLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {InfoContacto.address}
+            </a>
+          </p>
+
+          <div className="map-wrapper">
+            <iframe
+              className="map"
+              src={InfoContacto.mapLink}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
@@ -60,7 +85,8 @@ export default function Footer() {
         </p>
         <p>
           Web diseñada y desarrollada por Rocio Arenillas ·{" "}
-          <a 
+          <a
+            className="portfolio"
             href="https://portfolio-rocio-arenillas.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"

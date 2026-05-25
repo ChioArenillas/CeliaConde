@@ -6,7 +6,9 @@ import "./Servicios.css";
 export default function Servicios() {
   const terapias = Terapias.map((terapia) => {
     return (
-      <div className="terapia-card">
+      <div 
+      className="terapia-card"
+      key={terapia.id}>
         <h3>{terapia.title}</h3>
         <p>{terapia.description}</p>
         <div className="terapia-info">
@@ -25,7 +27,9 @@ export default function Servicios() {
 
   const pasos = Pasos.map((paso) => {
     return (
-      <div className="step">
+      <div 
+      className="step"
+      key={paso.id}>
         <div className="step-number">{paso.number}</div>
         <h3>{paso.title}</h3>
         <p>{paso.description}</p>

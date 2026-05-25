@@ -9,7 +9,6 @@ type ButtonProps = {
   buttonText?: ReactNode;
   target?: string;
   rel?: string;
-  type?: string;
 };
 
 export default function Button({
@@ -18,7 +17,6 @@ export default function Button({
   buttonText,
   target,
   rel,
-  type
 }: ButtonProps) {
   return (
     <a 
@@ -26,7 +24,6 @@ export default function Button({
     className={buttonClass}
     target={target}
     rel={rel}
-    type={type}
 >
       {buttonText}
     </a>

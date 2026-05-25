@@ -6,7 +6,7 @@ import Hero from "../../components/Hero/Hero";
 export default function About() {
   const formacion = Formacion.map((formacion) => {
     return (
-      <li>
+      <li key={formacion.id}>
         <strong>{formacion.title}</strong>
         <span>{formacion.description}</span>
         <span>{formacion.year}</span>
@@ -18,7 +18,9 @@ export default function About() {
     const Icon = value.icon;
 
     return (
-      <div className="value-card">
+      <div 
+      className="value-card"
+      key={value.id}>
         <Icon size={24} />
 
         <h3>{value.title}</h3>

@@ -1,18 +1,26 @@
 .footer {
-    width: 100%;
+  width: 100%;
   background: var(--code-bg);
   padding: 60px 20px 30px;
   margin-top: auto;
 }
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
 .footer-container {
   max-width: 1126px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
   margin-bottom: 40px;
-  align-items: center;
   text-align: center;
 }
+
 .footer-brand h3 {
   font-size: 24px;
   color: var(--text-h);
@@ -38,24 +46,19 @@
   flex-direction: column;
   gap: 12px;
 }
-.footer-links a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover {
-  color: var(--accent);
-}
+
 .footer-contact p {
   color: var(--text);
-  margin-bottom: 12px;
   font-size: 16px;
+  margin-bottom: 16px;
 }
-.footer-icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 12px;
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
 }
 .footer-bottom {
   max-width: 1126px;
@@ -69,41 +72,54 @@
   font-size: 14px;
   margin-bottom: 12px;
 }
+.portfolio{
+  text-decoration:underline;
+}
 .legal-links {
   display: flex;
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
 }
+
 .legal-links a {
-  color: var(--text);
-  text-decoration: none;
   font-size: 14px;
-  transition: color 0.2s;
 }
-.legal-links a:hover {
-  color: var(--accent);
-}
+
+/* TABLET */
 @media (max-width: 1024px) {
-  .footer-brand,
-  .footer-links,
-  .footer-contact {
-    text-align: center;
+  .footer-container{
+    gap: 40px;
   }
-  .footer-links nav {
-    align-items: center;
-  }
+
 }
+/* MOBILE */
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
   .footer {
     padding: 40px 15px 20px;
   }
+  .footer-icons {
+  margin-bottom: 8px;
+  }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .legal-links {
     flex-direction: column;
     gap: 8px;
   }
+
 }
+

@@ -30,6 +30,7 @@
 }
 .whatsapp-button:hover {
   transform: translateY(-4px);
+  color: var(--text-light);
 }
 .whatsapp-round {
   display: flex;
@@ -77,3 +78,14 @@
 .ig-footer:hover{
     color:var(--accent)
 }
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cta-button,
+  .whatsapp-button {
+    padding: 16px 24px;
+  }
+}
+

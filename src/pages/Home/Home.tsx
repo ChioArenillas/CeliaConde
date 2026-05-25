@@ -9,7 +9,8 @@ export default function Home() {
     const Icon = especialidad.icon;
 
     return (
-      <div className="especialidad-card">
+      <div className="especialidad-card" 
+      key={especialidad.id}>
         <Icon size={24} />
         <h3>{especialidad.title}</h3>
         <p>{especialidad.description}</p>
@@ -18,7 +19,8 @@ export default function Home() {
   });
   const reviews = Reviews.map((review) => {
     return (
-      <div className="testimonio-card">
+      <div className="testimonio-card" 
+      key={review.id}>
         <p>{review.text}</p>
         <span>- {review.name}</span>
       </div>
