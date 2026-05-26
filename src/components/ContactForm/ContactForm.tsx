@@ -12,6 +12,8 @@ export default function ContactForm() {
     asunto: "",
     mensaje: "",
   });
+  const [statusMessage, setStatusMessage] = useState("")
+  const [isError, setIsError] = useState(false)
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -37,7 +39,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   const phoneRegex = /^[+]?[\d\s()-]{9,}$/;
 
   if (!phoneRegex.test(formData.telefono.trim())) {
-    alert("Introduce un teléfono válido");
+    setIsError(true)
+    setStatusMessage("❌ Introduce un teléfono válido")
     return;
   }
 
@@ -46,7 +49,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   if (!serviceID || !templateID || !publicKey) {
-    alert("Faltan variables de configuración de EmailJS");
+    setIsError(true)
+    setStatusMessage("Faltan variables de configuración de EmailJS");
     return;
   }
 
@@ -71,9 +75,12 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       asunto: "",
       mensaje: "",
     });
+    setIsError(false)
+    setStatusMessage("✅ Mensaje enviado, te contactaré lo antes posible")
   } catch (error) {
     console.error(error);
-    alert("Error al enviar el mensaje");
+    setIsError(true)
+    setStatusMessage("❌Error al enviar el mensaje");
   }
 };  
 
@@ -159,6 +166,11 @@ return (
         <button className="submit-btn" type="submit">
           Enviar Mensaje
         </button>
+        {statusMessage && (
+          <p className={`form-message ${isError ? "error" : "success"}`}>
+            {statusMessage}
+          </p>
+        )}
       </form>
     </div>
   );
