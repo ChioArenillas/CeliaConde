@@ -1,6 +1,6 @@
 import "./Buttons.css";
 
-import "../Hero/Hero.css";
+import "../../sections/Hero/Hero.css";
 import type { ReactNode } from "react";
 
 type ButtonProps = {

@@ -1,0 +1,78 @@
+/* Información de contacto */
+.contacto-info {
+  background: var(--code-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  border-radius: 12px;
+  height: fit-content;
+}
+.contacto-info h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px;
+}
+.info-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+.info-item h3 {
+  font-size: 18px;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+.info-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.whatsapp-fixed {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+.whatsapp-btn:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+}
+.whatsapp-icon {
+  font-size: 24px;
+}
+@media (max-width: 1024px) {
+  .contacto-info {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .contacto-info {
+    padding: 30px 10px;
+  }
+}
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .contacto-info {
+    width: 100%;
+  }
+}

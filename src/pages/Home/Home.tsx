@@ -1,41 +1,20 @@
-import { Especialidades, Reviews } from "../../data/data";
 import "./Home.css";
 import heroImg from "/assets/CeliaConde.jpg";
-import CTA from "../../components/CTA/CTA";
-import Hero from "../../components/Hero/Hero";
+import CTA from "../../components/sections/CTA/CTA";
+import Hero from "../../components/sections/Hero/Hero";
+import EspecialidadesSection from "../../components/sections/EspecialidadesSection/EspecialidadesSection";
+import ReviewsSection from "../../components/sections/ReviewsSection/ReviewsSection";
 
 export default function Home() {
-  const especialidades = Especialidades.map((especialidad) => {
-    const Icon = especialidad.icon;
-
-    return (
-      <div className="especialidad-card" 
-      key={especialidad.id}>
-        <Icon size={24} />
-        <h3>{especialidad.title}</h3>
-        <p>{especialidad.description}</p>
-      </div>
-    );
-  });
-  const reviews = Reviews.map((review) => {
-    return (
-      <div className="testimonio-card" 
-      key={review.id}>
-        <p>{review.text}</p>
-        <span>- {review.name}</span>
-      </div>
-    );
-  });
-
   return (
     <section className="home">
-<Hero
-  variant="home"
-  title="Te acompaño a poner fin a relaciones familiares difíciles."
-  buttonText="Reserva una primera sesión"
-  buttonLink="/contacto"
-  image={heroImg}
-/>
+      <Hero
+        variant="home"
+        title="Te acompaño a poner fin a relaciones familiares difíciles."
+        buttonText="Reserva una primera sesión"
+        buttonLink="/contacto"
+        image={heroImg}
+      />
       <section className="home-content">
         <section className="como-trabaja reveal-item">
           <h2>Cómo trabajo</h2>
@@ -64,15 +43,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="especialidades reveal-item">
-          <h2>Especialidades</h2>
-          <div className="especialidades-grid">{especialidades}</div>
-        </section>
+        <EspecialidadesSection />
 
-        <section className="testimonios reveal-item">
-          <h2>Lo que dicen mis pacientes</h2>
-          <div className="testimonios-grid">{reviews}</div>
-        </section>
+        <ReviewsSection />
 
         <CTA
           title="¿Listo/a para dar el primer paso?"

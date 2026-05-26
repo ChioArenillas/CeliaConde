@@ -1,4 +1,4 @@
-import "../ContactForm/ContactForm.css";
+import "./ContactForm.css";
 import { useState, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 

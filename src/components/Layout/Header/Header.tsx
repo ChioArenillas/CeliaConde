@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { InfoContacto } from "../../data/data";
-import Button from "../Buttons/Buttons";
+import { InfoContacto } from "../../../data/data";
+import Button from "../../ui/Buttons/Buttons";
 
 export default function Header() {
   return (

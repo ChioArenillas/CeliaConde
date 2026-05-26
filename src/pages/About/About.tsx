@@ -1,52 +1,30 @@
 import "./About.css";
 import heroImg from "/assets/CeliaCondeSmall.jpg";
-import { Formacion, InfoContacto, Valores } from "../../data/data";
-import Hero from "../../components/Hero/Hero";
+import { InfoContacto } from "../../data/data";
+import Hero from "../../components/sections/Hero/Hero";
+import FormacionSection from "../../components/sections/FormacionSection/FormacionSection";
+import ValuesSection from "../../components/sections/ValuesSection/ValuesSection";
 
 export default function About() {
-  const formacion = Formacion.map((formacion) => {
-    return (
-      <li key={formacion.id}>
-        <strong>{formacion.title}</strong>
-        <span>{formacion.description}</span>
-        <span>{formacion.year}</span>
-      </li>
-    );
-  });
-
-  const values = Valores.map((value) => {
-    const Icon = value.icon;
-
-    return (
-      <div 
-      className="value-card"
-      key={value.id}>
-        <Icon size={24} />
-
-        <h3>{value.title}</h3>
-        <p>{value.description}</p>
-      </div>
-    );
-  });
-
   return (
     <div className="about">
-<Hero
-  variant="about"
-  title={InfoContacto.name}
-  subtitle={InfoContacto.job}
-  image={heroImg}
-/>
+      <Hero
+        variant="about"
+        title={InfoContacto.name}
+        subtitle={InfoContacto.job}
+        image={heroImg}
+      />
 
       <section className="about-content">
         <section className="reveal-item">
           <div className="about-text">
             <p>
-              Hola soy Celia, soy psicóloga licenciada por la Universidad Pontificia de
-              Comillas. Realicé mi especialidad en psicoterapia con el Máster en
-              terapia Familiar y de Pareja (Universidad Pontificia de Comillas)
-              y con la formación en Especialista en Psicoterapia y Psicodrama
-              (Asociación para el Estudio de la Psicoterapia y el Psicodrama).
+              Hola soy Celia, soy psicóloga licenciada por la Universidad
+              Pontificia de Comillas. Realicé mi especialidad en psicoterapia
+              con el Máster en terapia Familiar y de Pareja (Universidad
+              Pontificia de Comillas) y con la formación en Especialista en
+              Psicoterapia y Psicodrama (Asociación para el Estudio de la
+              Psicoterapia y el Psicodrama).
             </p>
             <p>
               Posteriormente, he desarrollado mi carrera profesional enfocada al
@@ -61,10 +39,8 @@ export default function About() {
           </div>
         </section>
 
-        <section className="about-credentials reveal-item">
-          <h2>Formación y Credenciales</h2>
-          <ul className="credentials-list">{formacion}</ul>
-        </section>
+        <FormacionSection />
+
         <section className="reveal-item">
           <div className="about-text">
             <p>
@@ -86,10 +62,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="about-values reveal-item">
-          <h2>Mis Valores</h2>
-          <div className="values-grid">{values}</div>
-        </section>
+        <ValuesSection />
       </section>
     </div>
   );

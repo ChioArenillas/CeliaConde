@@ -1,0 +1,45 @@
+/* Formación */
+.about-education {
+  background: var(--code-bg);
+  padding: 40px;
+  border-radius: 12px;
+}
+.about-education h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.education-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+.education-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+}
+.education-list li strong {
+  color: var(--text-h);
+  font-size: 18px;
+}
+.education-list li span {
+  color: var(--text);
+  font-size: 16px;
+}
+.education-list li:hover{
+  background: var(--code-bg);
+}
+@media (max-width: 768px) {
+  .about-education {
+    padding: 30px 20px;
+  }
+  .education-list {
+    grid-template-columns: 1fr;
+  }
+}

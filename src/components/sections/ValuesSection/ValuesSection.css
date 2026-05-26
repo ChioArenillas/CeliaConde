@@ -1,0 +1,39 @@
+/* Valores */
+.about-values {
+  text-align: center;
+}
+.about-values h2 {
+  margin-bottom: 40px;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+.value-card {
+  padding: 30px 20px;
+  background: linear-gradient(
+      135deg,
+      var(--code-bg)20%,
+      var(--accent)20%
+  );
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.value-card:hover {
+  box-shadow: var(--shadow);
+  background: var(--accent);
+}
+.value-card h3 {
+  color: var(--bg);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.value-card p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+

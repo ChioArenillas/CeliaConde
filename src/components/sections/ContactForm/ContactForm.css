@@ -1,6 +1,8 @@
 /* Formulario */
 .contacto-formulario {
   background: var(--bg);
+  display: flex;
+  flex-direction: column;
   padding: 40px 30px;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -79,10 +81,17 @@
   color: #d32f2f;
   border-color: rgba(211, 47, 47, 0.2);
 }
+@media (max-width: 1024px) {
+  .contacto-formulario {
+    width: 650px;
+    margin: 0 auto;
 
+  }
+}
 
 @media (max-width: 768px) {
   .contacto-formulario {
     padding: 30px 20px;
+    width: 100%;
   }
 }

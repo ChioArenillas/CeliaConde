@@ -1,0 +1,48 @@
+
+
+/* Tipos de terapia */
+.tipos-terapia {
+  text-align: center;
+}
+.tipos-terapia h2 {
+  margin-bottom: 40px;
+}
+.terapias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.terapia-card {
+  padding: 30px;
+  background: var(--code-bg);
+  border-radius: 12px;
+  text-align: left;
+}
+.terapia-card h3 {
+  color: var(--text-h);
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+.terapia-card > p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.terapia-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.terapia-info span {
+  font-size: 15px;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .terapia-card {
+    padding: 25px 20px;
+  }
+}

@@ -1,95 +1,23 @@
-import CTA from "../../components/CTA/CTA";
-import Hero from "../../components/Hero/Hero";
-import { Pasos, Terapias } from "../../data/data";
+import PasosSection from "../../components/sections/PasosSection/PasosSection";
+import CTA from "../../components/sections/CTA/CTA";
+import Hero from "../../components/sections/Hero/Hero";
+import ModalidadesSection from "../../components/sections/ModalidadesSection/ModalidadesSection";
+import TerapiasSection from "../../components/sections/TerapiasSection/TerapiasSection";
 import "./Servicios.css";
 
 export default function Servicios() {
-  const terapias = Terapias.map((terapia) => {
-    return (
-      <div 
-      className="terapia-card"
-      key={terapia.id}>
-        <h3>{terapia.title}</h3>
-        <p>{terapia.description}</p>
-        <div className="terapia-info">
-          <span>
-            <strong>Duración: </strong>
-            {terapia.duration}
-          </span>
-          <span>
-            <strong>Frecuencia: </strong>
-            {terapia.frequency}
-          </span>
-        </div>
-      </div>
-    );
-  });
-
-  const pasos = Pasos.map((paso) => {
-    return (
-      <div 
-      className="step"
-      key={paso.id}>
-        <div className="step-number">{paso.number}</div>
-        <h3>{paso.title}</h3>
-        <p>{paso.description}</p>
-      </div>
-    );
-  });
-
   return (
     <div className="servicios">
-<Hero
-  variant="servicios"
-  title="Servicios"
-  description="Acompañamiento psicológico profesional adaptado a tus necesidades."
-/>
+      <Hero
+        variant="servicios"
+        title="Servicios"
+        description="Acompañamiento psicológico profesional adaptado a tus necesidades."
+      />
 
       <section className="servicios-content">
-        <section className="modalidades reveal-item">
-          <h2>Modalidades de Atención</h2>
-          <div className="modalidades-grid">
-            <div className="modalidad-card">
-              <div className="modalidad-icon">🖥️</div>
-              <h3>Terapia Online</h3>
-              <p>
-                Sesiones por videollamada desde la comodidad de tu hogar. Misma
-                calidad y cercanía que la presencialidad.
-              </p>
-              <ul>
-                <li>Plataforma segura y confidencial</li>
-                <li>Horarios flexibles</li>
-                <li>Sin desplazamientos</li>
-                <li>
-                  Ideal para personas con movilidad reducida o que viven en el
-                  extranjero
-                </li>
-              </ul>
-            </div>
-            <div className="modalidad-card">
-              <div className="modalidad-icon">🏥</div>
-              <h3>Terapia Presencial</h3>
-              <p>
-                Atención en mi consulta, un espacio acogedor y seguro donde
-                trabajar juntos por tu bienestar.
-              </p>
-              <ul>
-                <li>Consulta céntrica y accesible</li>
-                <li>Ambiente tranquilo y privado</li>
-                <li>Atención personalizada</li>
-                <li>Protocolos de higiene y seguridad</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section className="tipos-terapia reveal-item">
-          <h2>Tipos de Terapia</h2>
-          <div className="terapias-grid">{terapias}</div>
-        </section>
-        <section className="proceso reveal-item">
-          <h2>¿Cómo empezar?</h2>
-          <div className="proceso-steps">{pasos}</div>
-        </section>
+        <ModalidadesSection />
+        <TerapiasSection />
+        <PasosSection />
         <CTA
           title="¿Tienes dudas?"
           description="Estoy aquí para ayudarte. Contacta conmigo sin compromiso."

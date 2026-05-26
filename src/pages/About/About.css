@@ -24,93 +24,12 @@
   font-size: 18px;
   margin-bottom: 20px;
 }
-/* Credenciales */
-.about-credentials {
-  background: var(--code-bg);
-  padding: 40px;
-  border-radius: 12px;
-}
-.about-credentials h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.credentials-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-}
-.credentials-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 20px;
-  background: var(--bg);
-  border-radius: 8px;
-  border-left: 4px solid var(--accent);
-}
-.credentials-list li strong {
-  color: var(--text-h);
-  font-size: 18px;
-}
-.credentials-list li span {
-  color: var(--text);
-  font-size: 16px;
-}
-.credentials-list li:hover{
-  background: var(--code-bg);
-}
-/* Valores */
-.about-values {
-  text-align: center;
-}
-.about-values h2 {
-  margin-bottom: 40px;
-}
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-}
-.value-card {
-  padding: 30px 20px;
-  background: linear-gradient(
-      135deg,
-      var(--code-bg)20%,
-      var(--accent)20%
-  );
-  color: var(--text-light);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.value-card:hover {
-  box-shadow: var(--shadow);
-  /* transform: translateY(-4px); */
-  background: var(--accent);
-}
-.value-card h3 {
-  color: var(--bg);
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-.value-card p {
-  line-height: 1.6;
-  font-size: 16px;
-}
-@media (max-width: 1024px) {
-}
+
 
 @media (max-width: 768px) {
-  .about-credentials {
-    padding: 30px 20px;
-  }
+
   .about-content {
     gap: 40px;
   }
-  .credentials-list {
-    grid-template-columns: 1fr;
-  }
+
 }
