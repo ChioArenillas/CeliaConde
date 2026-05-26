@@ -50,7 +50,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
   if (!serviceID || !templateID || !publicKey) {
     setIsError(true)
-    setStatusMessage("Faltan variables de configuración de EmailJS");
+    setStatusMessage("✖️ Error al enviar el mensaje");
     return;
   }
 
@@ -80,7 +80,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   } catch (error) {
     console.error(error);
     setIsError(true)
-    setStatusMessage("❌Error al enviar el mensaje");
+    setStatusMessage("❌ Error al enviar el mensaje");
   }
 };  
 
