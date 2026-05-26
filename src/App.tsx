@@ -9,6 +9,7 @@ import Legal from './pages/Legal/AvisoLegal'
 import Privacidad from './pages/Legal/Privacidad'
 import Cookies from './pages/Legal/Cookies'
 import ScrollToTop from './components/ScrollToTop'
+import NotFound from './pages/NotFound/NotFound'
 
 export default function App() {
 
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="legal" element={<Legal />} />
         <Route path="privacidad" element={<Privacidad />} />
         <Route path="cookies" element={<Cookies />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
     </BrowserRouter>
