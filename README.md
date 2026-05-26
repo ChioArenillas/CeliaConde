@@ -50,4 +50,4 @@ npm run dev
 
 ## 📌 Project Status
 
-Almost Completed
+Completed
